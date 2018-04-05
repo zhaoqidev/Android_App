@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none" >
+     <LinearLayout 
+         android:id="@+id/ll_default"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="#E7E7E7"
+         android:orientation="vertical" >
+		<TextView 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:paddingLeft="13dp"
+		    android:paddingTop="15dp"
+		    android:paddingRight="13dp"
+		    android:paddingBottom="15dp"
+		    android:textColor="@color/color_textcolor"
+		    android:textSize="14sp"
+		    android:text="@string/name_productitem_doc" />
+		
+	    <EditText 
+	        android:id="@+id/et_productname"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+		    android:padding="13dp"
+	        android:singleLine="true"
+	     	android:background="@drawable/edittext_selector2"
+	        android:textSize="14sp"
+	        android:textColor="@color/color_textcolor"
+	        android:textColorHint="@color/color_textcolor"
+	        android:hint="请输入产品名称"/>
+	    
+		<TextView 
+		    android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+		    android:padding="13dp"
+		    android:background="@color/white"
+		    android:layout_marginTop="10dp"
+	        android:textColor="@color/color_itemname"
+	        android:textSize="16sp"
+	        android:text="产品描述"/>
+		<View
+		    android:layout_width="match_parent"
+		    android:layout_height="1dp"
+		    android:background="@color/color_e8e8e8" />
+	    <EditText 
+	        android:id="@+id/et_productdesc"
+	        android:layout_width="match_parent"
+	        android:layout_height="81dp"
+		    android:paddingLeft="13dp"
+		    android:paddingRight="13dp"
+		    android:paddingTop="10dp"
+		    android:paddingBottom="10dp"
+	     	android:background="@drawable/edittext_selector2"
+	     	android:gravity="top"
+	        android:textSize="14sp"
+	        android:textColor="@color/color_textcolor"
+	        android:textColorHint="@color/color_textcolor"
+	        android:hint="请对产品进行介绍,让家人更加清晰的了解产品的功能."/>
+	    
+		<TextView 
+		    android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+		    android:padding="13dp"
+		    android:background="@color/white"
+		    android:layout_marginTop="10dp"
+	        android:textColor="@color/color_itemname"
+	        android:textSize="16sp"
+	        android:text="适合客户"/>
+		<View
+		    android:layout_width="match_parent"
+		    android:layout_height="1dp"
+		    android:background="@color/color_e8e8e8" />
+	    <EditText 
+	        android:id="@+id/et_productcustomer"
+	        android:layout_width="match_parent"
+	        android:layout_height="81dp"
+		    android:paddingLeft="13dp"
+		    android:paddingRight="13dp"
+		    android:paddingTop="10dp"
+		    android:paddingBottom="10dp"
+	     	android:background="@drawable/edittext_selector2"
+	     	android:gravity="top"
+	        android:textSize="14sp"
+	        android:textColor="@color/color_textcolor"
+	        android:textColorHint="@color/color_textcolor"
+	        android:hint="请对产品适合的客户进行介绍,让家人了解自己及朋友是否需要."/>
+		<TextView 
+		    android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+		    android:padding="13dp"
+		    android:background="@color/white"
+		    android:layout_marginTop="10dp"
+	        android:textColor="@color/color_itemname"
+	        android:textSize="16sp"
+	        android:text="产品价值"/>
+		<View
+		    android:layout_width="match_parent"
+		    android:layout_height="1dp"
+		    android:background="@color/color_e8e8e8" />
+	    <EditText  
+	        android:id="@+id/et_productvalue"
+	        android:layout_width="match_parent"
+	        android:layout_height="81dp"
+		    android:paddingLeft="13dp"
+		    android:paddingRight="13dp"
+		    android:paddingTop="10dp"
+		    android:paddingBottom="10dp"
+	     	android:background="@drawable/edittext_selector2"
+	     	android:gravity="top"
+	        android:textSize="14sp"
+	        android:textColor="@color/color_textcolor"
+	        android:textColorHint="@color/color_textcolor"
+	        android:hint="请对产品能够给客户带来什么好处进行介绍,对产品价值的了解是成交的基础."/>
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+		    android:paddingLeft="13dp"
+		    android:paddingTop="10dp"
+		    android:paddingRight="13dp"
+		    android:paddingBottom="5dp"
+	        android:background="@color/white" >
+	        <TextView 
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+			    android:background="@color/white"
+			    android:layout_marginTop="10dp"
+				android:textColor="@color/color_itemname"
+				android:layout_centerVertical="true"
+				android:textSize="16sp"
+				android:text="添加照片"/>
+	        <ImageView 
+	            android:id="@+id/iv_addpic"
+			    android:layout_width="25dp"
+			    android:layout_height="25dp"
+			    android:scaleType="fitXY"
+			    android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+			    android:src="@drawable/addpic_product"/>
+	    </RelativeLayout>
+		
+	    <!--<LinearLayout -->
+	        <!--android:layout_width="match_parent"-->
+	        <!--android:layout_height="wrap_content"-->
+		    <!--android:background="@color/white"-->
+	        <!--android:orientation="vertical" >-->
+	       <!--<cc.upedu.online.view.GrapeGridview-->
+	           <!--android:id="@+id/gridView"-->
+	           <!--android:layout_width="match_parent"-->
+	           <!--android:layout_height="wrap_content"-->
+	           <!--android:layout_marginLeft="13dp"-->
+	           <!--android:layout_marginRight="13dp"-->
+	           <!--android:layout_marginBottom="10dp"-->
+	           <!--android:scrollbars="none"-->
+	           <!--android:numColumns="5"-->
+	           <!--android:stretchMode="columnWidth" >-->
+	       <!--</cc.upedu.online.view.GrapeGridview>-->
+     	<!--</LinearLayout>-->
+		 <include android:id="@+id/layout_photos"
+			 layout="@layout/layout_photos"
+			 android:layout_width="match_parent"
+			 android:layout_height="wrap_content" />
+     </LinearLayout>
+</ScrollView>

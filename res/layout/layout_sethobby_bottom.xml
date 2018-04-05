@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- <GridView
+        android:id="@+id/gv_hobby"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/ll_hobby"
+        android:layout_marginTop="5dp"
+        android:columnWidth="90dp"
+        android:numColumns="4"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp"
+        android:visibility="gone"
+         >
+    </GridView> -->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_xiahuaxian" />
+
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:gravity="center_vertical"
+		    android:orientation="horizontal"
+		    android:paddingBottom="10dp"
+		    android:paddingLeft="8dp"
+		    android:paddingRight="8dp"
+		    android:paddingTop="10dp" >
+		
+		    <ImageView
+		        android:layout_width="25dp"
+		        android:layout_height="25dp"
+		        android:src="@drawable/aihao_zidingyi" />
+		
+		    <TextView
+		        android:id="@+id/tv_myhobby"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="5dp"
+		        android:background="@color/transparent"
+		        android:hint="可自定义爱好!"
+		        android:textColor="@color/color_textcolor"
+		        android:textColorHint="@color/color_textcolor"
+		        android:textSize="15sp" />
+		</LinearLayout>
+		<Button
+            android:id="@+id/bt_addhobby"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="44dp"
+            android:background="#FF5959"
+            android:text="@string/name_addhobby"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>

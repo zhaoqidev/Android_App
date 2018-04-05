@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_default" >
+    <EditText
+        android:id="@+id/et_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:background="@drawable/edittext_selector3"
+        android:gravity="top"
+        android:maxLength="100"
+        android:lines="8"
+        android:textColorHint="@color/color_textcolor"
+        android:hint="输入框"
+        android:textColor="@color/dark_grey"
+        android:textSize="14sp" />
+	<TextView
+        android:id="@+id/indexNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/et_note"
+        android:layout_alignRight="@id/et_note"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:singleLine="true"
+        android:text="0/100"
+        android:textColor="@color/color_textcolor"
+        android:textSize="12sp" />
+	<RadioGroup 
+        android:id="@+id/rg_jurisdiction" 
+		android:layout_width="match_parent" 
+		android:layout_height="wrap_content"
+		android:layout_below="@id/et_note"
+		android:orientation="vertical"> 
+		<LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="48dp"
+	        android:gravity="center_vertical"
+	        android:orientation="horizontal" >
+			<RadioButton
+                android:id="@+id/rb_open"
+                style="@style/main_tab_bottoms"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+            	android:layout_marginLeft="10dp"
+                android:background="@drawable/my_chockbox_note"
+                android:checked="true"
+                android:gravity="center" />
+		   	<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:hint="公开笔记"
+                android:textSize="16sp" />
+	    </LinearLayout>
+		<LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="48dp"
+	        android:gravity="center_vertical"
+	        android:orientation="horizontal" >
+			<RadioButton
+                android:id="@+id/rb_hide"
+                style="@style/main_tab_bottoms"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+            	android:layout_marginLeft="10dp"
+                android:background="@drawable/my_chockbox_note"
+                android:checked="false"
+                android:gravity="center" />
+			<TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:hint="隐藏笔记"
+                android:textSize="16sp" />
+	    </LinearLayout>
+	</RadioGroup>
+	<LinearLayout
+        android:id="@+id/ll_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical" >
+		<LinearLayout 
+	        android:id="@+id/ll_addnote"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center"
+	        android:layout_marginBottom="33dp"
+	        android:background="@color/light_red"
+	        android:orientation="horizontal" >
+	<!--         <ImageView 
+	            android:layout_width="20dp"
+	            android:layout_height="20dp"
+	            android:src="@drawable/add_value"/> -->        
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="11dp"
+	            android:layout_marginBottom="11dp"
+	            android:textColor="@color/white"
+	        	android:textSize="16sp"
+	        	android:text="@string/bt_save"/>
+	    </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

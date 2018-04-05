@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" >
+		<View
+	         android:layout_width="match_parent"
+	         android:layout_height="0.5dp"
+	         android:background="@color/xiahuaxian" />
+		<!-- 企业名称 -->
+		<LinearLayout 
+	        android:id="@+id/ll_setcompanyname"
+		    android:layout_width="match_parent"
+		    android:layout_height="50dp"
+   			android:background="@drawable/selector_item"
+		    android:gravity="center_vertical"
+		    android:orientation="horizontal" >
+			<ImageView 
+			    android:layout_width="25dp"
+			    android:layout_height="25dp"
+			    android:layout_marginLeft="10dp"
+			    android:src="@drawable/setcp_qiye"/>
+	        <TextView 
+	            android:layout_width="0dp"
+	            android:layout_weight="1"
+		        android:layout_height="wrap_content"
+		        style="@style/user_setting_name"
+		        android:textSize="16sp"
+		        android:text="企业名称"/>
+	        <LinearLayout 
+			    android:layout_width="0dp"
+			    android:layout_weight="2"
+			    android:layout_height="wrap_content"
+			    android:gravity="right"
+			    android:orientation="horizontal" >
+		        <TextView 
+	   				android:id="@+id/tv_setcompanyname"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            android:singleLine="true"
+			        style="@style/user_setting_content"
+			        android:text="@string/name_noset"/>
+		        <ImageView 
+		            android:layout_gravity="center_vertical"
+			        style="@style/right_arrows_style" />
+	        </LinearLayout>
+	     </LinearLayout>
+	     <View
+	         android:layout_width="match_parent"
+	         android:layout_height="0.5dp"
+	         android:background="@color/xiahuaxian" />
+	     <!-- 所属行业 -->
+		<LinearLayout 
+	        android:id="@+id/ll_setindustry"
+		    android:layout_width="match_parent"
+		    android:layout_height="50dp"
+   			android:background="@drawable/selector_item"
+		    android:gravity="center_vertical"
+		    android:orientation="horizontal" >
+			<ImageView 
+			    android:layout_width="25dp"
+			    android:layout_height="25dp"
+			    android:layout_marginLeft="10dp"
+			    android:src="@drawable/setcp_hangye"/>
+	        <TextView 
+	            android:layout_width="0dp"
+	            android:layout_weight="1"
+		        android:layout_height="wrap_content"
+		        style="@style/user_setting_name"
+		        android:textSize="16sp"
+		        android:text="所属行业"/>
+	        <LinearLayout 
+			    android:layout_width="0dp"
+			    android:layout_weight="2"
+			    android:layout_height="wrap_content"
+			    android:gravity="right"
+			    android:orientation="horizontal" >
+		        <TextView 
+	   				android:id="@+id/tv_setindustry"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            android:singleLine="true"
+			        style="@style/user_setting_content"
+			        android:text="@string/name_noset"/>
+		        <ImageView 
+		            android:layout_gravity="center_vertical"
+			        style="@style/right_arrows_style" />
+	        </LinearLayout>
+	     </LinearLayout>
+	     <View
+	         android:layout_width="match_parent"
+	         android:layout_height="0.5dp"
+	         android:background="@color/xiahuaxian" />
+	     <!-- 企业所在地 -->
+		<LinearLayout 
+	        android:id="@+id/ll_setcompanycity"
+		    android:layout_width="match_parent"
+		    android:layout_height="50dp"
+   			android:background="@drawable/selector_item"
+		    android:gravity="center_vertical"
+		    android:orientation="horizontal" >
+			<ImageView 
+			    android:layout_width="25dp"
+			    android:layout_height="25dp"
+			    android:layout_marginLeft="10dp"
+			    android:src="@drawable/setcp_dizhi"/>
+	        <TextView 
+	            android:layout_width="0dp"
+	            android:layout_weight="1"
+		        android:layout_height="wrap_content"
+		        style="@style/user_setting_name"
+		        android:textSize="16sp"
+		        android:text="企业所在地"/>
+	        <LinearLayout 
+			    android:layout_width="0dp"
+			    android:layout_weight="2"
+			    android:layout_height="wrap_content"
+			    android:gravity="right"
+			    android:orientation="horizontal" >
+		        <TextView 
+	   				android:id="@+id/tv_setcompanycity"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            android:singleLine="true"
+			        style="@style/user_setting_content"
+			        android:text="@string/name_noset"/>
+		        <ImageView 
+		            android:layout_gravity="center_vertical"
+			        style="@style/right_arrows_style" />
+	        </LinearLayout>
+	     </LinearLayout>
+	     <View
+	         android:layout_width="match_parent"
+	         android:layout_height="0.5dp"
+	         android:background="@color/xiahuaxian" />
+	     <!-- 主营产品 -->
+	     <LinearLayout 
+	        android:id="@+id/ll_setproductlist"
+		    android:layout_width="match_parent"
+		    android:layout_height="50dp"
+   			android:background="@drawable/selector_item"
+		    android:gravity="center_vertical"
+		    android:orientation="horizontal" >
+			<ImageView 
+			    android:layout_width="25dp"
+			    android:layout_height="25dp"
+			    android:layout_marginLeft="10dp"
+			    android:src="@drawable/setcp_chanpin"/>
+	        <TextView 
+	            android:layout_width="0dp"
+	            android:layout_weight="1"
+		        android:layout_height="wrap_content"
+		        style="@style/user_setting_name"
+		        android:textSize="16sp"
+		        android:text="主营产品"/>
+	        <LinearLayout 
+			    android:layout_width="0dp"
+			    android:layout_weight="2"
+			    android:layout_height="wrap_content"
+			    android:gravity="right"
+			    android:orientation="horizontal" >
+		        <TextView 
+	   				android:id="@+id/tv_setproductlist"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            android:singleLine="true"
+			        style="@style/user_setting_content"
+			        android:text="@string/name_noset"/>
+		        <ImageView 
+		            android:layout_gravity="center_vertical"
+			        style="@style/right_arrows_style" />
+	        </LinearLayout>
+	     </LinearLayout>
+	     <View
+	         android:layout_width="match_parent"
+	         android:layout_height="0.5dp"
+	         android:background="@color/xiahuaxian" />
+	     <!-- 我的职位 -->
+	     <LinearLayout 
+	        android:id="@+id/ll_setposition"
+		    android:layout_width="match_parent"
+		    android:layout_height="50dp"
+   			android:background="@drawable/selector_item"
+		    android:gravity="center_vertical"
+		    android:orientation="horizontal" >
+			<ImageView 
+			    android:layout_width="25dp"
+			    android:layout_height="25dp"
+			    android:layout_marginLeft="10dp"
+			    android:src="@drawable/setcp_zhiwei"/>
+	        <TextView 
+	            android:layout_width="0dp"
+	            android:layout_weight="1"
+		        android:layout_height="wrap_content"
+		        style="@style/user_setting_name"
+		        android:textSize="16sp"
+		        android:text="我的职务"/>
+	        <LinearLayout 
+			    android:layout_width="0dp"
+			    android:layout_weight="2"
+			    android:layout_height="wrap_content"
+			    android:gravity="right"
+			    android:orientation="horizontal" >
+		        <TextView 
+	   				android:id="@+id/tv_setposition"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            android:singleLine="true"
+			        style="@style/user_setting_content"
+			        android:text="@string/name_noset"/>
+		        <ImageView 
+		            android:layout_gravity="center_vertical"
+			        style="@style/right_arrows_style" />
+	        </LinearLayout>
+	     </LinearLayout>
+	     <View
+	         android:layout_width="match_parent"
+	         android:layout_height="0.5dp"
+	         android:background="@color/xiahuaxian" />
+	     <!-- 企业网站 -->
+	     <LinearLayout 
+	        android:id="@+id/ll_setcompanyweb"
+		    android:layout_width="match_parent"
+		    android:layout_height="50dp"
+   			android:background="@drawable/selector_item"
+		    android:gravity="center_vertical"
+		    android:orientation="horizontal" >
+			<ImageView 
+			    android:layout_width="25dp"
+			    android:layout_height="25dp"
+			    android:layout_marginLeft="10dp"
+			    android:src="@drawable/setcp_wangzhan"/>
+	        <TextView 
+	            android:layout_width="0dp"
+	            android:layout_weight="1"
+		        android:layout_height="wrap_content"
+		        style="@style/user_setting_name"
+		        android:textSize="16sp"
+		        android:text="企业网站"/>
+	        <LinearLayout 
+			    android:layout_width="0dp"
+			    android:layout_weight="2"
+			    android:layout_height="wrap_content"
+			    android:gravity="right"
+			    android:orientation="horizontal" >
+		        <TextView 
+	   				android:id="@+id/tv_setcompanyweb"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            android:singleLine="true"
+			        style="@style/user_setting_content"
+			        android:text="@string/name_noset"/>
+		        <ImageView 
+		            android:layout_gravity="center_vertical"
+			        style="@style/right_arrows_style" />
+	        </LinearLayout>
+	     </LinearLayout>
+	     <View
+	         android:layout_width="match_parent"
+	         android:layout_height="0.5dp"
+	         android:background="@color/xiahuaxian" />
+     </LinearLayout>
+</ScrollView>

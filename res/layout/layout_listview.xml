@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+	
+	<ListView 
+		android:id="@+id/lv_base"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:cacheColorHint="@android:color/white"
+		android:divider="@color/color_xiahuaxian"
+		android:dividerHeight="1px"
+		android:fadingEdge="none"
+		android:scrollbars="none">
+       
+	</ListView>
+	<LinearLayout 
+		android:id="@+id/ll_nocontent"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="center"
+		android:orientation="vertical" >
+		<ImageView
+		    android:id="@+id/iv_nocontent"
+           style="@style/image_placeholder_style"
+           android:src="@drawable/nodata" />
+	</LinearLayout>
+</FrameLayout>

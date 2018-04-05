@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/cc.upedu.online"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/menu_left_img"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <cc.upedu.online.view.CircleImageView
+            android:id="@+id/iv_menu_head"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/left_menu_head"
+            app:border_color="@color/white_80"
+            app:border_width="2dp" />
+        
+
+        <TextView
+            android:id="@+id/tv_menu_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_menu_head"
+            android:layout_marginLeft="29dp"
+            android:layout_toRightOf="@+id/iv_menu_head"
+            android:text="高小兴"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_menu_zhiwu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_menu_name"
+            android:layout_below="@+id/tv_menu_name"
+            android:text="市场部经理"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_menu_lode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/iv_menu_head"
+            android:text="立即登录"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.3dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/white_80" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/shuoming" 
+                />
+
+            <TextView
+                android:id="@+id/tv_menu_qianming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/imageView1"
+                android:singleLine="true"
+                android:text="真实的表达自己，让更多的家人了解我"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.3dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/white_80" />
+        
+    </LinearLayout>
+
+    <!-- 显示侧拉栏条目的listview -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+		<LinearLayout
+		    android:id="@+id/ll_one"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_marginTop="10dp"
+	        android:layout_marginLeft="40dp"
+            android:layout_marginBottom="20dp"
+	        android:orientation="horizontal" >
+            
+	        <LinearLayout
+	            android:id="@+id/ll_setting"
+		        android:layout_width="wrap_content"
+	            android:gravity="center_vertical"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+	            <ImageView
+			        android:id="@+id/iv_item"
+			        android:layout_width="22dp"
+			        android:layout_height="22dp"
+			        android:src="@drawable/left_seting" />
+		        <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="5dp"
+		            android:text="@string/name_setting"
+		            android:textColor="@color/white"
+		            android:textSize="15sp" />
+	        </LinearLayout>
+		    <View 
+		        android:layout_width="0.5dp"
+		        android:layout_height="20dp"
+		        android:background="@color/white_80"
+		        android:layout_marginLeft="20dp"
+		        android:layout_marginRight="20dp"
+		        />
+	        <LinearLayout
+	            android:id="@+id/ll_shoppingcart"
+		        android:layout_width="fill_parent"
+	            android:gravity="center_vertical"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+	            <ImageView
+			        android:layout_width="22dp"
+			        android:layout_height="22dp"
+			        android:src="@drawable/left_shoppingcart" />
+		        <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="5dp"
+		            android:singleLine="true"
+		            android:text="@string/name_shoppingcart"
+		            android:textColor="@color/white"
+		            android:textSize="15sp" />
+	        </LinearLayout>
+	    </LinearLayout>
+	    <View
+	        android:id="@+id/v_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="19dp"
+            android:layout_marginRight="19dp"
+            android:layout_above="@id/ll_one"
+            android:background="@color/white_80" />
+        <ListView
+            android:id="@+id/lv_left_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_above="@+id/v_line"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:focusable="true"
+            android:scrollbars="none"
+            android:visibility="visible">
+        </ListView>
+        
+    </RelativeLayout>
+</LinearLayout>

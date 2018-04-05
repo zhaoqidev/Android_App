@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:id="@+id/ll_discpveritem"
+    android:clickable="true"
+     >
+<!-- 导师名片-导师风采的条目 -->
+    <ImageButton
+        android:id="@+id/ib_zhiku_item"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/wodeimg_default" />
+    <TextView 
+        android:id="@+id/tv_zhiku_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_gravity="center"
+        android:text="企业哲学企业哲学企业哲学企业哲学"
+        android:textSize="12sp"
+        android:visibility="gone"
+        />
+
+</LinearLayout>

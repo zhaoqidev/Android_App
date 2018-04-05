@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_item"
+    android:id="@+id/ll_teacher_item_pic"
+    android:padding="5dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/note_user_image"
+        android:layout_width="100dip"
+        android:layout_height="80dip"
+        android:background="@color/transparent"
+        android:src="@drawable/left_menu_head" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp" >
+            
+            <TextView
+	            android:id="@+id/note_user_name"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_toLeftOf="@+id/praise_count"
+	            android:singleLine="true"
+	            android:text="王小丫"
+	            android:textColor="@color/color_itemname"
+	            android:textSize="14sp" />
+            
+            <TextView 
+            	android:id="@+id/praise_count"
+                android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:drawableLeft="@drawable/menu_arr_select"
+            	android:layout_alignParentRight="true"
+            	android:layout_marginRight="10dp"
+            	android:textSize="12sp"
+            	android:text="昨天  12:25"/>
+        </RelativeLayout>
+
+        <TextView 
+		    android:id="@+id/note_content"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginRight="10dp"
+		    android:ellipsize="end"  
+	        android:maxLines="2"  
+	        android:singleLine="false"
+		    android:textSize="13sp"
+		    android:text="一个是阆苑仙葩，一个是美玉无瑕。"/>
+    </LinearLayout>
+</LinearLayout>

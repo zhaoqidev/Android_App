@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/backGrond"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="8dp" >
+
+            <Button
+                android:id="@+id/btn_filter"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:text="最近一个月"
+                android:textSize="12dp" />
+
+            <Button
+                android:id="@+id/btn_condition_scheme"
+                android:layout_width="82dp"
+                android:layout_height="30dp"
+                android:background="@drawable/mywellet_tiaojian" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_start_end"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/backGrond"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tv_starttime"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tv_endtime"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center" />
+
+            <Button
+                android:id="@+id/btn_search"
+                android:layout_width="82dp"
+                android:layout_height="30dp"
+                android:background="@color/titlered"
+                android:text="查询"
+                android:textColor="@color/white"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_piechart"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+             >
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pie_chart"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="70dp"
+                android:visibility="gone" >
+            </com.github.mikephil.charting.charts.PieChart>
+
+            <com.github.mikephil.charting.charts.HorizontalBarChart
+                android:id="@+id/horizontal_barchart"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_below="@+id/ib_detail"
+                android:layout_marginRight="15dp"
+                android:visibility="gone" />
+           
+
+        <LinearLayout
+            android:id="@+id/ll_nodata"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ib_detail"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ImageView
+                style="@style/image_placeholder_style"
+                android:src="@drawable/nodata" />
+        </LinearLayout>
+
+
+            <ImageButton
+                android:id="@+id/ib_detail"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/mywallet_detile" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/bar_legend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:gravity="right"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ll_default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

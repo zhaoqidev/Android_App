@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:orientation="horizontal" >
+<!-- 侧拉栏，我的购物车中底部布局 -->
+	
+    <LinearLayout
+	    android:layout_width="0dp"
+	    android:layout_weight="7"
+	    android:layout_height="wrap_content"
+    	android:baselineAligned="false"
+	    android:background="#000000"
+	    android:orientation="horizontal" >
+	    <LinearLayout
+        	android:id="@+id/ll_choose_scope" 
+		    android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+	    	android:padding="10dp"
+			android:orientation="horizontal"> 
+		    <CheckBox
+                android:id="@+id/cb_choose_scope"
+                style="@style/main_tab_bottoms"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/my_shoppingall_chockbox"
+                android:checked="false"
+                android:gravity="center" />
+			<TextView
+			    android:id="@+id/tv_choose_scope"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:text="全选"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+	    </LinearLayout>
+	    <LinearLayout
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+	    	android:padding="10dp"
+		    android:orientation="horizontal" >
+		    <TextView 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+		    	android:textColor="@color/white"
+			    android:textSize="16sp"
+			    android:text="合计:" />
+		    <TextView 
+		        android:id="@+id/tv_total"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+		    	android:textColor="@color/white"
+		    	android:singleLine="true"
+			    android:textSize="16sp"
+			    android:text="@string/count_morry" />
+		</LinearLayout>
+	</LinearLayout>
+	<LinearLayout
+	    android:id="@+id/ll_settlement"
+	    android:layout_width="0dp"
+	    android:layout_weight="3"
+	    android:layout_height="wrap_content"
+	    android:background="#ff5e5e"
+	    android:padding="10dp"
+	    android:orientation="horizontal" >
+	    <TextView
+	        android:id="@+id/tv_settlement" 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textSize="16sp"
+		    android:textColor="@color/white"
+		    android:text="去结算(0)" />
+	</LinearLayout>
+</LinearLayout>

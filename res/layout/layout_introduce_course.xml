@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+
+        <LinearLayout
+            android:id="@+id/layout_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+			<ImageView
+				android:id="@+id/course_image_item"
+				android:layout_width="78dip"
+				android:layout_height="60dip"
+				android:src="@drawable/img_course" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/course_item_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/name_course"
+                    android:textColor="@color/color_itemname"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp" >
+					<LinearLayout
+	                    android:layout_width="0dp"
+	                    android:layout_weight="1"
+	                    android:layout_height="wrap_content"
+	                    android:orientation="horizontal" >
+	                    <ImageView
+	                        android:id="@+id/iv_theacher"
+			                android:layout_width="15dp"
+			                android:layout_height="15dp"
+			                android:scaleType="fitXY"
+			                android:src="@drawable/courseitem_daoshi" />
+	
+	                    <TextView
+	                        android:id="@+id/teacher_Name"
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:layout_marginLeft="5dp"
+	                        android:singleLine="true"
+	                        android:text="@string/name_teacher"
+	                        android:textColor="@color/color_textcolor"
+	                        android:textSize="12sp" />
+					</LinearLayout>
+					<LinearLayout
+	                    android:layout_width="0dp"
+	                    android:layout_weight="1"
+	                    android:layout_height="wrap_content"
+	                    android:orientation="horizontal" >
+	                    <ImageView
+	                        android:id="@+id/iv_time"
+			                android:layout_width="15dp"
+			                android:layout_height="15dp"
+			                android:scaleType="fitXY"
+			                android:src="@drawable/article_time" />
+	
+	                    <TextView
+	                        android:id="@+id/course_time"
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:layout_marginLeft="5dp"
+	                        android:singleLine="true"
+	                        android:text="2小时30分"
+	                        android:textColor="@color/color_textcolor"
+	                        android:textSize="12sp" />
+	                </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+		<View
+	        android:id="@+id/line"
+	        android:layout_width="match_parent"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="5dp"
+	        android:layout_height="0.5dip"
+			android:layout_below="@id/layout_one"
+	        android:background="@color/color_xiahuaxian" />
+	</RelativeLayout>

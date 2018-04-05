@@ -1,0 +1,875 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/cc.upedu.online"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none" >
+    
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+       <FrameLayout 
+        android:layout_width="match_parent"
+        android:layout_height="182dp">
+        <ImageView 
+            android:id="@+id/user_card_bg"
+		    android:layout_width="match_parent"
+		    android:layout_height="182dp"
+		    android:background="@color/transparent"
+		    android:scaleType="fitXY"
+		    android:src="@drawable/usercardbg"/>
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_gravity="center_vertical"
+	        android:background="@color/transparent" >
+	        <LinearLayout 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:gravity="center_vertical"
+	            android:layout_marginLeft="15dp"
+	            android:layout_marginTop="12dp"
+	            android:orientation="horizontal">
+	            <ImageView 
+				    android:id="@+id/iv_user_stpe"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:src="@drawable/user_stpe_student_write"/>
+		        <TextView
+		            android:id="@+id/tv_userstpe_name"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="6dp"
+		            android:text="学生"
+		            android:textColor="@color/white"
+		            android:textSize="14sp"
+		            android:visibility="visible" />
+	        </LinearLayout>
+	        <LinearLayout
+	            android:id="@+id/ll_attention"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+			    android:layout_alignParentRight="true"
+			    android:layout_marginTop="10dp"
+			    android:layout_marginRight="10dp"
+			    android:paddingTop="3dp"
+			    android:paddingBottom="3dp"
+			    android:gravity="center_vertical"
+	            android:orientation="horizontal" >
+				<ImageView 
+				    android:id="@+id/iv_attention"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:src="@drawable/usershow_attention"/>
+	            <TextView
+		            android:id="@+id/tv_attention"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="2dp"
+		            android:text="@string/name_attention"
+		            android:textColor="@color/white"
+		            android:textSize="14sp"
+		            android:visibility="visible" />
+	        </LinearLayout>
+	        <TextView 
+	            android:id="@+id/praise_count"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:layout_marginTop="10dp"
+	            android:layout_marginRight="5dp"
+	            android:drawableRight="@drawable/icon_reply"
+	            android:visibility="gone"
+	            android:text="888"
+	            android:textColor="@color/white"
+	            android:textSize="15sp"/>
+	        <cc.upedu.online.view.CircleImageView
+                      android:id="@+id/iv_user_head"
+                      android:layout_width="60dp"
+                      android:layout_height="60dp"
+                      android:layout_marginTop="18dp"
+                      android:layout_centerHorizontal="true"
+                      android:src="@drawable/left_menu_head"
+                      app:border_color="@color/border_color"
+                      app:border_width="2dp" />
+	        <LinearLayout 
+	            android:id="@+id/ll_id"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@id/iv_user_head"
+                      android:layout_marginTop="8dp"
+                      android:layout_centerHorizontal="true"
+	            android:orientation="horizontal">
+		        <TextView
+		            android:id="@+id/tv_user_name"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/name_noset"
+		            android:textColor="@color/white"
+		            android:textSize="16sp"
+		            android:visibility="visible" />
+		
+		        <TextView
+		            android:id="@+id/tv_user_position"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="6dp"
+		            android:text="@string/name_noset"
+		            android:textColor="@color/user_show_d5d1cb"
+		            android:textSize="14sp"
+		            android:visibility="visible" />
+		
+	        </LinearLayout>
+	        <LinearLayout 
+	            android:id="@+id/ll_bt"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@id/ll_id"
+                      android:layout_marginTop="6dp"
+                      android:layout_centerHorizontal="true"
+	            android:orientation="horizontal">
+				<TextView
+		            android:id="@+id/tv_user_contactway"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+                       android:drawableLeft="@drawable/call_phone"
+		            android:text="@string/name_noset"
+		            android:textColor="@color/white"
+		            android:textSize="14sp" />
+				<TextView
+		            android:id="@+id/tv_user_write"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="10dp"
+                       android:drawableLeft="@drawable/user_write"
+		            android:text="写信"
+		            android:textColor="@color/white"
+		            android:textSize="14sp" />
+	        </LinearLayout>
+	        
+	        <View
+	            android:id="@+id/line"
+	            android:layout_width="match_parent"
+	            android:layout_height="1dp"
+	            android:layout_below="@id/ll_bt"
+	            android:layout_marginLeft="20dp"
+	            android:layout_marginRight="20dp"
+                      android:layout_marginTop="10dp"
+	            android:background="@color/white_4c" />
+	        <LinearLayout 
+	            android:id="@+id/ll_last"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@id/line"
+	            android:layout_alignParentBottom="true"
+	            android:gravity="center"
+	            android:orientation="vertical">
+		        <!-- 个性签名 -->
+			<TextView 
+      				android:id="@+id/tv_show_signature"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:gravity="center_horizontal"
+	            android:layout_marginLeft="25dp"
+	            android:layout_marginRight="25dp"
+		        android:textColor="@color/white"
+		        android:maxLines="2"
+		        android:textSize="13sp"
+		        android:text="真实地表达自己,让更多的家人了解我,真实的表达自己,让更多家人了解我"/>
+        </LinearLayout>
+    </RelativeLayout>
+	    
+   </FrameLayout>
+    
+    <View
+       android:layout_width="match_parent"
+       android:layout_height="10dip"
+       android:background="@color/color_xiahuaxian" />
+   <!-- 我的企业 -->
+	<LinearLayout
+		android:id="@+id/ll_show_company"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+		android:background="@drawable/selector_item"
+		android:gravity="center_vertical"
+		android:orientation="horizontal" >
+		<ImageView 
+		    android:id="@+id/iv_company_one"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="15dp"
+		    android:src="@drawable/show_qiye"/>
+		<TextView 
+		    android:id="@+id/tv_com_title"
+			android:layout_width="85dp"
+	        android:layout_height="wrap_content"
+	        style="@style/user_show_name"
+	        android:text="@string/name_mycompany"/>
+		<RelativeLayout 
+			android:id="@+id/ll_com_one"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal" >
+			<ImageView 
+				android:id="@+id/iv_com_arrow"
+				android:layout_width="20dp"
+				android:layout_height="20dp"
+				android:layout_marginLeft="3dp"
+				android:layout_marginRight="6dp"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+				android:src="@drawable/show_jiantou"
+				android:layout_gravity="center_vertical" />
+			<TextView 
+				android:id="@+id/tv_show_company"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="8dp"
+				android:layout_toLeftOf="@+id/iv_com_arrow"
+				android:layout_centerVertical="true"
+				android:gravity="right"
+				android:maxLines="3"
+				android:textSize="14sp"
+				android:textColor="@color/user_show_b8bbbb"
+				android:text="@string/name_noset"/>
+		</RelativeLayout>
+    </LinearLayout>
+    <View
+       android:layout_width="match_parent"
+       android:layout_height="0.5dip"
+       android:background="@color/color_xiahuaxian" />
+    <!-- 所在城市 -->
+   <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+	<ImageView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="15dp"
+	    android:src="@drawable/show_didian"/>
+	<TextView 
+           android:layout_width="85dp"
+        android:layout_height="wrap_content"
+	    android:layout_centerVertical="true"
+        style="@style/user_show_name"
+        android:text="我的位置"/>
+       <TextView 
+        android:id="@+id/tv_show_mycity"
+           android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        style="@style/user_show_content"
+        android:text="@string/name_noset"/>
+    </LinearLayout>
+    <View
+       android:layout_width="match_parent"
+       android:layout_height="0.5dip"
+       android:background="@color/color_xiahuaxian" />
+    <!-- 家乡位置 -->
+   <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+	<ImageView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="15dp"
+	    android:src="@drawable/show_jiaxiang"/>
+	<TextView 
+           android:layout_width="85dp"
+        android:layout_height="wrap_content"
+	    android:layout_centerVertical="true"
+        style="@style/user_show_name"
+        android:text="我的家乡"/>
+       <TextView 
+        android:id="@+id/tv_show_hometown"
+           android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        style="@style/user_show_content"
+        android:text="@string/name_noset"/>
+    </LinearLayout>
+    <View
+       android:layout_width="match_parent"
+       android:layout_height="0.5dip"
+       android:background="@color/color_xiahuaxian" />
+    <!-- 往来城市 -->
+   <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+	<ImageView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="15dp"
+	    android:src="@drawable/show_wanglaichengshi"/>
+	<TextView 
+           android:layout_width="85dp"
+        android:layout_height="wrap_content"
+	    android:layout_centerVertical="true"
+        style="@style/user_show_name"
+        android:text="往来城市"/>
+       <TextView 
+        android:id="@+id/tv_show_adress3"
+           android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        style="@style/user_show_content"
+        android:text="@string/name_noset"/>
+    </LinearLayout>
+     <View
+       android:layout_width="match_parent"
+       android:layout_height="0.5dip"
+       android:background="@color/color_xiahuaxian" />
+     
+    <!-- 我的qq号 -->
+   <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+	<ImageView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="15dp"
+	    android:src="@drawable/show_qq"/>
+	<TextView 
+           android:layout_width="85dp"
+        android:layout_height="wrap_content"
+	    android:layout_centerVertical="true"
+        style="@style/user_show_name"
+        android:text="@string/name_myqq"/>
+       <TextView 
+       	android:id="@+id/tv_show_qq"
+           android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        style="@style/user_show_content"
+        android:text="@string/name_noset"/>
+    </LinearLayout>
+     <View
+       android:layout_width="match_parent"
+       android:layout_height="0.5dip"
+       android:background="@color/color_xiahuaxian" />
+    <!-- 我的邮箱 -->
+   <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+	<ImageView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="15dp"
+	    android:src="@drawable/show_youxiang"/>
+	<TextView 
+           android:layout_width="85dp"
+        android:layout_height="wrap_content"
+	    android:layout_centerVertical="true"
+        style="@style/user_show_name"
+        android:text="@string/name_myemail"/>
+       <TextView 
+       	android:id="@+id/tv_show_email"
+           android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        style="@style/user_show_content"
+        android:text="@string/name_noset"/>
+    </LinearLayout>
+    <View
+       android:layout_width="match_parent"
+       android:layout_height="0.5dip"
+       android:background="@color/color_xiahuaxian" />
+    <!-- 我的微信号 -->
+   <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+	<ImageView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="15dp"
+	    android:src="@drawable/show_weixin"/>
+	<TextView 
+           android:layout_width="85dp"
+        android:layout_height="wrap_content"
+	    android:layout_centerVertical="true"
+        style="@style/user_show_name"
+        android:text="@string/name_myweix"/>
+       <TextView 
+       	android:id="@+id/tv_show_weixin"
+           android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        style="@style/user_show_content"
+        android:text="@string/name_noset"/>
+    </LinearLayout>
+   
+    <View
+       android:layout_width="match_parent"
+       android:layout_height="10dip"
+       android:background="@color/color_xiahuaxian" />
+    <!-- 我的生日 -->
+   <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+	<ImageView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="15dp"
+	    android:src="@drawable/show_shengri"/>
+	<TextView 
+           android:layout_width="85dp"
+        android:layout_height="wrap_content"
+	    android:layout_centerVertical="true"
+        style="@style/user_show_name"
+        android:text="阳历生日"/>
+       <TextView 
+        android:id="@+id/tv_show_birthday"
+           android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        style="@style/user_show_content"
+        android:text="@string/name_noset"/>
+    </LinearLayout>
+    <!-- 阴历生日 -->
+    <LinearLayout
+     android:id="@+id/ll_show_birthday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+     <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="@color/color_xiahuaxian" />
+    <LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@color/transparent"
+	    android:gravity="center_vertical"
+	    android:orientation="horizontal" >
+		<ImageView 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="15dp"
+		    android:src="@drawable/show_birthdayzodiac"/>
+		
+		<TextView 
+            android:layout_width="85dp"
+	        android:layout_height="wrap_content"
+		    android:layout_centerVertical="true"
+	        style="@style/user_show_name"
+	        android:text="阴历生日"/>
+        <TextView 
+	        android:id="@+id/tv_show_birthdayzodiac"
+            android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="right"
+	        style="@style/user_show_content"
+	        android:text="@string/name_noset"/>
+     </LinearLayout>
+     <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="@color/color_xiahuaxian" />
+     <!-- 星座 -->
+    <RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@color/transparent"
+	    android:gravity="center_vertical"
+	    android:orientation="horizontal" >
+		<ImageView 
+		    android:id="@+id/iv_constellation"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="15dp"
+		    android:layout_centerVertical="true"
+		    android:src="@drawable/show_constellation"/>
+		<TextView 
+		    android:id="@+id/tv_title_constellation"
+            android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@+id/iv_constellation"
+	        android:layout_toLeftOf="@+id/ll_constellation"
+		    android:layout_centerVertical="true"
+	        style="@style/user_show_name"
+	        android:text="星座"/>
+		<LinearLayout
+	        android:id="@+id/ll_constellation"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+		    android:layout_centerVertical="true"
+	        android:gravity="center_vertical"
+		    android:orientation="horizontal" >
+	        <ImageView 
+		        android:id="@+id/iv_show_constellation"
+	            android:layout_width="40sp"
+		        android:layout_height="40sp"
+		        android:layout_marginRight="5dp"
+				android:src="@drawable/img_constellation"/>
+	        <TextView 
+		        android:id="@+id/tv_show_constellation"
+	            android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginRight="29dp"
+		        android:textColor="@color/user_show_b8bbbb"
+		        android:textSize="14sp"
+		        android:text="@string/name_noset"/>
+		</LinearLayout>
+     </RelativeLayout>
+     <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="@color/color_xiahuaxian" />
+     <!-- 属相 -->
+    <RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@color/transparent"
+	    android:gravity="center_vertical"
+	    android:orientation="horizontal" >
+		<ImageView 
+		    android:id="@+id/iv_zodiac"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="15dp"
+		    android:layout_centerVertical="true"
+		    android:src="@drawable/show_zodiac"/>
+		
+		<TextView 
+	        android:id="@+id/tv_title_zodiac"
+            android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@+id/iv_zodiac"
+	        android:layout_toLeftOf="@+id/ll_zodiac"
+		    android:layout_centerVertical="true"
+	        style="@style/user_show_name"
+	        android:text="属相"/>
+		<LinearLayout
+	        android:id="@+id/ll_zodiac"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:gravity="center_vertical"
+		    android:layout_centerVertical="true"
+		    android:orientation="horizontal" >
+	        <ImageView 
+		        android:id="@+id/iv_show_zodiac"
+	            android:layout_width="40sp"
+		        android:layout_height="40sp"
+		        android:layout_marginRight="5dp"
+				android:src="@drawable/img_zodiac"/>
+	        <TextView 
+		        android:id="@+id/tv_show_zodiac"
+	            android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginRight="29dp"
+		        android:textColor="@color/user_show_b8bbbb"
+		        android:textSize="14sp"
+		        android:text="@string/name_noset"/>
+		</LinearLayout>
+     </RelativeLayout>
+    </LinearLayout>
+    <View
+       android:layout_width="match_parent"
+       android:layout_height="0.5dip"
+       android:background="@color/color_xiahuaxian" />
+    <!-- 性别 -->
+   <LinearLayout 
+       android:id="@+id/ll_show_gender"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+	<ImageView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="15dp"
+	    android:src="@drawable/show_gender"/>
+	<TextView 
+           android:layout_width="85dp"
+        android:layout_height="wrap_content"
+	    android:layout_centerVertical="true"
+        style="@style/user_show_name"
+        android:text="@string/name_mygender"/>
+       <TextView 
+        android:id="@+id/tv_show_gender"
+           android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+         		android:lineSpacingMultiplier="1.2"
+        android:gravity="right"
+        style="@style/user_show_content"
+        android:text="@string/name_noset"/>
+    </LinearLayout>
+    <View
+       android:layout_width="match_parent"
+       android:layout_height="0.5dip"
+       android:background="@color/color_xiahuaxian" />
+    <!-- 婚否 -->
+   <LinearLayout 
+       android:id="@+id/ll_show_married"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+	<ImageView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="15dp"
+	    android:src="@drawable/show_married"/>
+	<TextView 
+           android:layout_width="85dp"
+        android:layout_height="wrap_content"
+	    android:layout_centerVertical="true"
+        style="@style/user_show_name"
+        android:text="@string/name_mymarried"/>
+       <TextView 
+        android:id="@+id/tv_show_married"
+           android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+         		android:lineSpacingMultiplier="1.2"
+        android:gravity="right"
+        style="@style/user_show_content"
+        android:text="@string/name_noset"/>
+    </LinearLayout>
+    <View
+       android:layout_width="match_parent"
+       android:layout_height="0.5dip"
+       android:background="@color/color_xiahuaxian" />
+    <!-- 我的爱好 -->
+   <LinearLayout 
+       android:id="@+id/ll_show_hobby"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+	<ImageView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="15dp"
+	    android:src="@drawable/show_aihao"/>
+	<TextView 
+           android:layout_width="85dp"
+        android:layout_height="wrap_content"
+	    android:layout_centerVertical="true"
+        style="@style/user_show_name"
+        android:text="@string/name_myhobby"/>
+       <TextView 
+        android:id="@+id/tv_show_hobby"
+           android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+         		android:lineSpacingMultiplier="1.2"
+        android:gravity="right"
+        style="@style/user_show_content"
+        android:text="@string/name_noset"/>
+    </LinearLayout>
+    <View
+       android:layout_width="match_parent"
+       android:layout_height="0.5dip"
+       android:background="@color/color_xiahuaxian" />
+    <!-- 我的梦想 -->
+    <RelativeLayout 
+       android:id="@+id/rl_show_dream"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+				android:background="@drawable/selector_item" >
+	<ImageView 
+	    android:id="@+id/iv_dream_one"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="15dp"
+	    android:layout_centerVertical="true"
+	    android:src="@drawable/show_mengxiang"/>
+	<TextView 
+	    android:id="@+id/tv_dream_title"
+           android:layout_width="85dp"
+        android:layout_height="wrap_content"
+	    android:layout_centerVertical="true"
+	    android:layout_toRightOf="@+id/iv_dream_one"
+        style="@style/user_show_name"
+        android:text="@string/name_mydream"/>
+	<RelativeLayout 
+           android:id="@+id/ll_dream_one"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_toRightOf="@+id/tv_dream_title"
+	    android:layout_centerVertical="true"
+	    android:layout_alignParentRight="true"
+	    android:orientation="horizontal" >
+        <ImageView 
+            android:id="@+id/iv_dream_arrow"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="6dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/show_jiantou" />
+        <TextView 
+  				android:id="@+id/tv_show_dream"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/iv_dream_arrow"
+            android:layout_marginLeft="8dp"
+	    	android:gravity="right"
+	        android:textSize="14sp"
+	        android:textColor="@color/color_textcolor"
+	        android:text="@string/name_noset"/>
+       </RelativeLayout>
+    </RelativeLayout>
+    <View
+       android:layout_width="match_parent"
+       android:layout_height="0.5dip"
+       android:background="@color/color_xiahuaxian" />
+    <!-- 价值观与信念 -->
+    <RelativeLayout 
+       android:id="@+id/rl_show_thought"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+				android:background="@drawable/selector_item" >
+	<ImageView 
+	    android:id="@+id/iv_thought_one"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="15dp"
+	    android:layout_centerVertical="true"
+	    android:src="@drawable/show_jiazhi"/>
+	<TextView 
+	    android:id="@+id/tv_thought_title"
+           android:layout_width="90dp"
+        android:layout_height="wrap_content"
+	    android:layout_centerVertical="true"
+	    android:layout_toRightOf="@+id/iv_thought_one"
+        style="@style/user_show_name"
+        android:text="@string/name_myvalues"/>
+	<RelativeLayout 
+           android:id="@+id/ll_thought_one"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_toRightOf="@+id/tv_thought_title"
+	    android:layout_centerVertical="true"
+	    android:layout_alignParentRight="true" >
+        <ImageView 
+            android:id="@+id/iv_thought_arrow"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="6dp"
+	    	android:layout_alignParentRight="true"
+	    	android:layout_centerVertical="true"
+            android:src="@drawable/show_jiantou" />
+        <TextView 
+  				android:id="@+id/tv_show_thought"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/iv_thought_arrow"
+            android:layout_marginLeft="8dp"
+	    	android:gravity="right"
+	        android:textSize="14sp"
+	        android:textColor="@color/color_textcolor"
+	        android:text="@string/name_noset"/>
+       </RelativeLayout>
+    </RelativeLayout>
+   
+    <View
+       android:layout_width="match_parent"
+       android:layout_height="0.5dip"
+       android:background="@color/color_xiahuaxian" />
+     <!-- 我的照片 -->
+	    <RelativeLayout 
+	        android:id="@+id/ll_show_picture"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+  				android:background="@drawable/selector_item"
+		    android:paddingTop="15dp"
+		    android:paddingBottom="15dp" >
+			<ImageView 
+			    android:id="@+id/iv_tree"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_marginLeft="15dp"
+			    android:src="@drawable/show_zhaopian"/>
+	        <LinearLayout 
+	            android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+			    android:layout_marginLeft="8dp"
+			    android:layout_toRightOf="@+id/iv_tree"
+			    android:layout_toLeftOf="@+id/ll_one"
+			    android:orientation="vertical" >
+			    <cc.upedu.online.view.MyGridView
+		            android:id="@+id/gv_show_picture"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:horizontalSpacing="10dp"
+		            android:scrollbars="none"
+		            android:listSelector="@null"
+		            android:gravity="top"
+		            android:focusableInTouchMode="true"
+		            android:focusable="true"
+		            android:numColumns="4"
+		            android:stretchMode="columnWidth" >
+		        </cc.upedu.online.view.MyGridView>
+		        <TextView 
+			        android:id="@+id/tv_show_picture"
+			        android:layout_width="match_parent"
+			        android:layout_height="25dp"
+			    	android:focusableInTouchMode="true"
+		            android:focusable="true"
+			    	android:clickable="false"
+			        android:textColor="@color/black"
+			        android:gravity="center_vertical"
+			        android:textSize="15sp"
+			        android:text="未上传照片"/>
+			</LinearLayout>
+	        <LinearLayout 
+	            android:id="@+id/ll_one"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentRight="true"
+			    android:layout_centerVertical="true"
+			    android:gravity="center_vertical"
+			    android:orientation="horizontal" >
+		        <ImageView 
+		            android:id="@+id/iv_pic_arrow"
+		            android:layout_width="20dp"
+		            android:layout_height="20dp"
+				    android:gravity="center_vertical"
+				    android:layout_marginLeft="8dp"
+		            android:layout_marginRight="6dp"
+		            android:src="@drawable/show_jiantou" />
+	        </LinearLayout>
+	     </RelativeLayout>
+	     <View
+	        android:layout_width="match_parent"
+	        android:layout_height="0.5dip"
+	        android:background="@color/color_xiahuaxian" />
+	</LinearLayout>
+</ScrollView>

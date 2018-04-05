@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_videoanswer_play" >
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+        <ImageView 
+	        android:id="@+id/iv_back"
+	        android:layout_width="25dp"
+	        android:layout_height="25dp"
+	        android:layout_marginLeft="8dp"
+	        android:src="@drawable/img_up"/>
+    </LinearLayout>
+	<include
+	    layout="@layout/layout_video" />
+	
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    	android:background="@color/transparent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+            <ImageView 
+		        android:layout_width="20dp"
+		        android:layout_height="20dp"
+		        android:layout_marginLeft="14dp"
+		        android:layout_marginTop="26dp"
+		        android:src="@drawable/records_section"/>
+            <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="center_vertical"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="27dp"
+		        android:orientation="vertical" >
+		        <TextView
+		            android:id="@+id/tv_answertitle"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:text="标题"
+	                android:textColor="@color/white"
+	                android:textSize="16sp" />
+		        <TextView
+		            android:id="@+id/tv_creattime"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_marginTop="8dp"
+	                android:text="时间"
+	                android:textColor="@color/white_80"
+	                android:textSize="13sp" />
+				<TextView
+		            android:id="@+id/tv_answercontent"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_marginTop="16dp"
+	                android:text="内容"
+	                android:textColor="@color/white"
+	                android:textSize="15sp" />
+		    </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

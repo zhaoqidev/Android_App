@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <!-- 微商城确定订单布局 -->
+    <RelativeLayout
+        android:id="@+id/ll_one"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+	    android:layout_marginTop="12dp"
+        android:padding="8dp"
+        android:background="@color/white"
+        android:gravity="center_vertical" >
+        <ImageView
+            android:id="@+id/iv_commodity_pic"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/wodeimg_default" />
+		<TextView
+		    android:id="@+id/tv_commodity_name"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_toRightOf="@id/iv_commodity_pic"
+			android:layout_marginLeft="13dp"
+			android:layout_marginRight="5dp"
+			android:maxLines="3"
+			android:textColor="@color/color_itemname"
+			android:textSize="16sp"
+			android:text="货物名称" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+			android:layout_toRightOf="@id/iv_commodity_pic"
+			android:layout_alignParentBottom="true"
+			android:layout_marginLeft="13dp"
+			android:layout_marginRight="5dp"
+			android:layout_marginBottom="8dp"
+            android:orientation="horizontal" >
+            <TextView
+                android:id="@+id/tv_price"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="3"
+	            android:textColor="@color/actionsheet_red"
+	            android:textSize="14sp"
+	            android:text="0成长币" />
+            <TextView
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:gravity="right"
+	            android:textColor="@color/color_itemname"
+	            android:textSize="16sp"
+	            android:text="×1" />
+        </LinearLayout>
+    </RelativeLayout>
+	<LinearLayout
+        android:id="@+id/ll_balance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_one"
+        android:layout_marginTop="12dp"
+        android:padding="8dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_itemname"
+            android:textSize="16sp"
+            android:text="当前成长币余额:" />
+        <TextView
+            android:id="@+id/tv_balance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:background="@color/white"
+            android:textColor="@color/red"
+            android:textSize="16sp"
+            android:text="" />
+    </LinearLayout>
+	<RelativeLayout
+        android:id="@+id/rl_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@color/white"
+        android:layout_below="@id/ll_balance"
+        android:padding="8dp" >
+	    <FrameLayout
+	        android:id="@+id/fl_address"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_toLeftOf="@+id/iv_right" >
+	        <TextView
+	            android:id="@+id/tv"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:textColor="@color/color_itemname"
+	            android:textSize="16sp"
+	            android:visibility="visible"
+	            android:text="选择地址" />
+	        <RelativeLayout
+		        android:id="@+id/rl_detailed_address"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+	            android:visibility="gone" >
+		        <TextView
+		            android:id="@+id/tv_one"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:textColor="@color/color_itemname"
+		            android:textSize="16sp"
+		            android:text="收货人:" />
+		        <TextView
+		            android:id="@+id/tv_name"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_toRightOf="@id/tv_one"
+		            android:layout_toLeftOf="@id/tv_phone"
+		            android:layout_marginLeft="5dp"
+		            android:textColor="@color/color_itemname"
+		            android:singleLine="true"
+		            android:textSize="16sp"
+		            android:text="姓名" />
+		        <TextView
+		            android:id="@+id/tv_phone"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:textColor="@color/color_itemname"
+		            android:singleLine="true"
+		            android:textSize="16sp"
+		            android:text="000" />
+		        <TextView
+		            android:id="@+id/tv_detailed_address"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:textColor="@color/color_itemname"
+		            android:layout_below="@id/tv_one"
+		            android:layout_marginTop="5dp"
+		            android:textSize="14sp"
+		            android:text="详细地址" />
+		    </RelativeLayout>
+	    </FrameLayout>
+        <ImageView
+            android:id="@+id/iv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/right" />
+    </RelativeLayout>
+
+	<LinearLayout
+        android:id="@+id/ll_remark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_address"
+        android:background="@color/white"
+        android:layout_marginTop="12dp"
+        android:padding="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_itemname"
+            android:textSize="16sp"
+            android:text="备注:" />
+        <EditText
+            android:id="@+id/et_remark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:background="@color/white"
+            android:textColor="@color/color_itemname"
+            android:textSize="16sp"
+            android:hint="选填，可填写备注。" />
+    </LinearLayout>
+</RelativeLayout>

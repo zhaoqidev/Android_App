@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical" >
+    <!-- MainActivity中带有搜索栏的titleBar -->
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="44dp"
+	    android:background="@drawable/titlebar_bg"
+   		android:baselineAligned="false"
+	    android:gravity="center_vertical"
+	    android:orientation="horizontal">
+	    <!-- android:scaleType="fitXY" 回去拉伸前景-->
+	    <LinearLayout
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:orientation="horizontal" >
+		    <ImageButton
+		        android:id="@+id/imgbtn_left"
+		        android:layout_width="24dp"
+		        android:layout_height="24dp"
+		        android:layout_marginLeft="16dp"
+		        android:layout_marginRight="5dp"
+		        android:background="@android:color/transparent"
+		        android:src="@drawable/exam_mena"
+		        android:scaleType="centerInside" />
+		</LinearLayout>
+	    <LinearLayout
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="2"
+	        android:gravity="center"
+	        android:orientation="horizontal" >
+			<LinearLayout
+		        android:id="@+id/rl_main_text"
+		        android:focusable="true"
+		        android:clickable="true"
+		        android:padding="5dp"
+		        android:gravity="center_vertical"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+		        <TextView
+		            android:id="@+id/tv_main_title"
+		            android:focusable="false"
+		        	android:clickable="false"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:drawablePadding="5dp"
+		            android:singleLine="true"
+		            android:textSize="16sp"
+		            android:textColor="@color/white"
+		            android:text="首页" />
+		        <ImageView 
+		            android:id="@+id/txt_image"
+		            android:visibility="gone"
+		            android:layout_width="15dp"
+		            android:layout_height="15dp"
+		            android:layout_marginLeft="8dp"
+		            android:src="@drawable/xiajiantou"/>
+		    </LinearLayout>
+	    </LinearLayout>
+	    <LinearLayout
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:gravity="right"
+	        android:orientation="horizontal" >
+		    <ImageButton
+		        android:id="@+id/imgbtn_recode"
+		        android:layout_width="24dp"
+		        android:layout_height="24dp"
+		        android:layout_marginRight="8dp"
+		        android:background="@android:color/transparent"
+		        android:visibility="visible"
+		        android:src="@drawable/record"
+		        android:scaleType="centerInside" />
+		
+		    <ImageButton 
+		        android:id="@+id/btn_search"
+		        android:layout_width="24dp"
+		        android:layout_height="24dp"
+		        android:layout_marginRight="16dp"
+		        android:background="@android:color/transparent"
+		        android:src="@drawable/search"
+		        android:scaleType="centerInside"  />
+	    </LinearLayout>
+    </LinearLayout>
+    
+	<RelativeLayout 
+	    android:id="@+id/search_bar"
+	    android:layout_width="match_parent"
+	    android:layout_height="45dp"
+	    android:background="@drawable/titlebar_bg"
+		android:visibility="gone"
+	    >
+	    <LinearLayout
+            android:id="@+id/backsearch"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="4dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/back" />
+        </LinearLayout>
+
+	    <EditText
+            android:id="@+id/search_text"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/seachbox"
+            android:drawableLeft="@drawable/seachbtn"
+            android:hint="@string/name_chazhao"
+            android:imeOptions="actionSearch"
+            android:layout_marginLeft="4dip"
+            android:layout_toLeftOf="@+id/btn_search_two"
+            android:layout_toRightOf="@+id/backsearch"
+            android:textSize="14sp"
+            android:textColorHint="@color/color_textcolor"
+            android:textColor="@color/color_textcolor" />
+	    <ImageButton 
+	        android:id="@+id/btn_search_two"
+	        android:layout_width="32dp"
+	        android:layout_height="32dp"
+	        android:layout_marginLeft="4dp"
+	        android:layout_marginRight="4dp"
+			android:layout_centerVertical="true"
+	        android:layout_alignParentRight="true"
+	        android:background="@android:color/transparent"
+	        android:src="@drawable/search"
+	        android:scaleType="centerInside"  />
+	</RelativeLayout>
+</FrameLayout>

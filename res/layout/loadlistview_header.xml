@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/loadlistviewheader_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom|center_horizontal"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="48dp"
+        android:paddingRight="48dp"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/loadlistviewheader_arrow"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/waexloadlistview_down_arrow"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="192dp"
+            android:layout_height="48dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/loadlistviewheader_stateTextView"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:gravity="center"
+                android:textColor="#8f8f8f"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/loadlistviewheader_infoTextView"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:gravity="center"
+                android:textColor="#8f8f8f"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

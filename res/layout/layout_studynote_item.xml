@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/cc.upedu.online"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_item"
+    android:padding="10dp"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:id="@+id/ll_teacher_item_pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+		<cc.upedu.online.view.CircleImageView
+	        android:id="@+id/note_user_image"
+	        android:layout_width="60dp"
+	        android:layout_height="60dp"
+	        android:layout_marginRight="10dp"
+	        app:border_color="@color/border_color"
+	        app:border_width="1dp"
+	        android:src="@drawable/left_menu_head" />
+
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" >
+	
+	        <RelativeLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginBottom="5dp" >
+	            
+	            <TextView
+		            android:id="@+id/note_user_name"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:singleLine="true"
+		            android:text="名称"
+		            android:textColor="@color/color_itemname"
+		            android:textSize="14sp" />
+	            
+	            <TextView
+		            android:layout_marginLeft="15dp"
+		            android:id="@+id/note_user_work"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_toRightOf="@+id/note_user_name"
+		            android:layout_toLeftOf="@+id/ll_one"
+		            android:layout_alignBaseline="@+id/note_user_name"
+		            android:singleLine="true"
+		            android:text="职位"
+		            android:textColor="@color/color_textcolor"
+		            android:textSize="12sp" />
+	            <LinearLayout
+	                android:id="@+id/ll_one"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	            	android:layout_marginRight="10dp"
+	            	android:layout_alignParentRight="true"
+	            	android:layout_centerVertical="true"
+	            	android:visibility="gone"
+	                android:orientation="horizontal" >
+	                <ImageView
+		                android:layout_width="15dip"
+		                android:layout_height="15dip"
+		                android:layout_marginRight="3dp"
+		                android:src="@drawable/hong_shou" />
+		            <TextView 
+		            	android:id="@+id/praise_count"
+		                android:layout_width="wrap_content"
+		            	android:layout_height="wrap_content"
+		            	android:layout_marginRight="10dp"
+		            	android:textSize="12sp"
+		            	android:text="12"/>
+	            </LinearLayout>
+	        </RelativeLayout>
+	
+	        <TextView
+	            android:id="@+id/note_time"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:singleLine="true"
+	            android:text="2015-04-23 12:25"
+	            android:textColor="@color/color_textcolor"
+	            android:textSize="12sp" />
+	    </LinearLayout>
+        
+    </LinearLayout>
+
+	<TextView 
+	    android:id="@+id/note_content"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="#44f5f5f5"
+	    android:padding="8dp"
+	    android:ellipsize="end"  
+        android:maxLines="2"  
+        android:singleLine="false"
+	            android:textColor="@color/color_textcolor"
+	    android:textSize="13sp"
+	    android:text="笔记内容"/>
+</LinearLayout>

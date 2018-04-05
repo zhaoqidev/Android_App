@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/teacher_doc"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="4dp"
+    android:lineSpacingMultiplier="1.4"
+    android:text="导师描述信息"
+    android:textColor="@color/viewColor3"
+    android:textSize="13sp" >
+
+</TextView>

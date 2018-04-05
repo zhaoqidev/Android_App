@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/ll_default" >
+
+    <!-- 微商城地址页面布局 -->
+
+    <LinearLayout
+        android:id="@+id/ll_recipients"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+	    android:background="@color/white"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_textcolor"
+            android:textSize="16sp"
+            android:text="收货人:" />
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="@color/white"
+            android:textColor="@color/color_itemname"
+            android:textSize="16sp"
+            android:text="" />
+    </LinearLayout>
+	<View
+	    android:id="@+id/line_one"
+	    android:layout_width="match_parent"
+	    android:layout_height="0.5dp"
+	    android:layout_below="@id/ll_recipients"
+	    android:background="@color/color_backcolor" />
+	<LinearLayout
+        android:id="@+id/ll_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_one"
+	    android:background="@color/white"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_textcolor"
+            android:textSize="16sp"
+            android:text="联系方式:" />
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="@color/white"
+            android:textColor="@color/color_itemname"
+            android:textSize="16sp"
+            android:text="" />
+    </LinearLayout>
+	<View
+	    android:id="@+id/line_two"
+	    android:layout_width="match_parent"
+	    android:layout_height="0.5dp"
+	    android:layout_below="@+id/ll_contact"
+	    android:background="@color/color_backcolor" />
+	<RelativeLayout
+        android:id="@+id/rl_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_two"
+	    android:background="@color/white"
+        android:padding="10dp" >
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_textcolor"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:text="所在地区:" />
+        <TextView
+            android:id="@+id/tv_cityaddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv"
+            android:layout_toLeftOf="@+id/iv"
+            android:padding="5dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/color_itemname"
+            android:textSize="16sp"
+            android:text="省、市、区" />
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/right" />
+    </RelativeLayout>
+	<View
+	    android:id="@+id/line_three"
+	    android:layout_width="match_parent"
+	    android:layout_height="0.5dp"
+	    android:layout_below="@+id/rl_address"
+	    android:background="@color/color_backcolor" />
+	<LinearLayout
+        android:id="@+id/ll_detailaddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_three"
+	    android:background="@color/white"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_textcolor"
+            android:textSize="16sp"
+            android:text="详细地址:" />
+        <EditText
+            android:id="@+id/et_detailaddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="@color/white"
+            android:textColor="@color/color_itemname"
+            android:textSize="16sp"
+            android:text="" />
+    </LinearLayout>
+	<View
+	    android:id="@+id/line_four"
+	    android:layout_width="match_parent"
+	    android:layout_height="0.5dp"
+	    android:layout_below="@+id/ll_detailaddress"
+	    android:background="@color/color_backcolor" />
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_below="@+id/line_four" >
+	    <Button
+	        android:id="@+id/bt_save"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="60dp"
+	        android:layout_marginRight="60dp"
+	        android:padding="10dp"
+	        android:textColor="@color/white"
+	        android:background="@color/actionsheet_red"
+	        android:layout_centerHorizontal="true"
+	        android:layout_alignParentBottom="true"
+	        android:layout_marginBottom="30dp"
+	        android:text="@string/bt_save" />
+	</RelativeLayout>
+</RelativeLayout>

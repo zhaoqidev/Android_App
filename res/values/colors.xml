@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="orange">#ffff740f</color>
+    <color name="yellow">#ffe87215</color>
+    <color name="red">#ffff0000</color>
+    <color name="gray">#ff7d7d7d</color>
+    <color name="darkgray">#ff808080</color>
+    <color name="fontblack">#ff4b4b4b</color>
+    
+    <color name="color_backcolor">#f4f4f4</color>
+    <color name="showpro_textcolor">#5b5b5b</color>
+    <color name="tab_color">#a9b7b7</color>
+    <color name="tab_choice_color">#eb4f38</color>
+    <color name="viewColor3">#646464</color>
+    <color name="viewColor">#F0F0F0</color>
+    <color name="color_e5e6e8">#e5e6e8</color>
+    <color name="color_e8e8e8">#e8e8e8</color>
+    <color name="course_title">#333333</color>
+    <color name="course_doc">#999999</color>
+    <color name="button_black">#363636</color>
+    
+   <!-- 线的颜色 -->
+    <color name="color_xiahuaxian">#dfe3df</color>
+    <color name="xiahuaxian">#ececec</color>
+    <color name="xiahuaxian_one">#D7D7D7</color>
+    <color name="xiahuaxian_two">#88dfe3df</color>
+    <color name="line_dadada">#dadada</color>
+    
+    <!-- 输入框hint字体颜色 -->
+    <color name="color_textcolor">#969696</color>
+    <!-- 界面背景色 -->
+    <color name="backGrond">#F6F6F6</color>
+    <color name="backGrond_f3">#F3F3F3</color>
+    <!-- 条目名称字体 -->
+    <color name="color_itemname">#323232</color>
+    <!-- 自定义dialog字体颜色 -->
+    <color name="dialog_text">#929397</color>
+    <color name="dialog_red">#FA5758</color>
+    <color name="color_chaptertitle">#ed5a45</color>
+    <!-- 条目获取焦点的背景色 -->
+    <color name="color_item_bg">#f1f1f1</color>
+    <!-- 80%透明度白色 -->
+	 <color name="white_cc">#ccffffff</color>
+    <!-- 50%透明度白色 -->
+	 <color name="white_80">#80ffffff</color>
+    <!-- 30%透明度白色 -->
+	 <color name="white_4c">#4cffffff</color>
+	 <!-- 整个APP title 的颜色 -->
+	 <color name="titlered">#fa5b5b</color>
+    <!-- 50%透明度title色 -->
+	 <color name="titlered_80">#80fa5b5b</color>
+	 <color name="titlered_33">#33fa7373</color>
+    <!-- 70%透明度title色 -->
+	 <color name="titlered_b2">#b2fa7373</color>
+	 <color name="red_fe5d5e">#fe5d5e</color>
+	 <color name="red_fe3d35">#fe3d35</color>
+	 <color name="red_f87878">#f87878</color>
+	 <color name="red_fb5252">#fb5252</color>
+	 <color name="red_e15d1d">#e15d1d</color>
+	 
+    <!-- 荧光黄 -->
+    <color name="lucifer_yellow">#CEDD11</color>
+    <!-- 深灰色 -->
+    <color name="dark_grey">#444444</color>
+    <color name="grey_e7e7e7">#444444</color>
+    <!-- 浅灰色 -->
+    <color name="light_grey">#E4E5E0</color>
+    <!-- 浅红色 -->
+    <color name="light_red">#FA5454</color>
+    <!-- shi黄色 -->
+    <color name="shit_yellow">#C6BE94</color>
+    <!-- 橘黄色 -->
+    <color name="saffron_yellow">#E46C0A</color>
+    <!-- 米白背景色 -->
+    <color name="bg_beige">#EFEFEF</color>
+    <!-- 文本颜色,浅黑 -->
+    <color name="text_color_one">#575757</color>
+    <!-- 文本颜色,深黑 -->
+    <color name="text_color_two">#262626</color>
+    <!-- 文本颜色,深灰 -->
+    <color name="text_color_three">#747676</color>
+    <!-- 文本颜色,浅黑 -->
+    <color name="text_color_four">#666666</color>
+    <!-- 文本颜色,蓝色 -->
+    <color name="text_color_five">#1055FF</color>
+    <!-- 文本颜色,浅灰色 -->
+    <color name="text_color_six">#ADADAD</color>
+    <!-- 文本颜色,浅灰色 -->
+    <color name="text_color_seven">#FF5757</color>
+    <!-- 文本颜色,灰色 -->
+    <color name="text_color_eight">#878787</color>
+    <!-- 文本颜色,浅蓝色 -->
+    <color name="text_color_nine">#6dcce1</color>
+    <!-- 文本颜色,浅蓝色 -->
+    <color name="text_color_ten">#4093c6</color>
+    <!-- 文本颜色,半透明白色 -->
+    <color name="text_color_eleven">#80FFFFFF</color>
+    <!-- 文本颜色,屎黄色 -->
+   <!--  <color name="text_color_twelve">#B2FA5252</color> -->
+    
+    <!-- 圆形头像外面的一圈 -->
+    <color name="border_color">#E1E1E1</color>
+    <color name="border_color_red">#fa8164</color>
+    
+	<color name="alertdialog_line">#c6c6c6</color>
+    <color name="actionsheet_blue">#037BFF</color>
+    <color name="actionsheet_red">#FD4A4A</color>
+    <color name="actionsheet_gray">#8F8F8F</color>
+    <color name="study_button_text">#616161</color>
+    
+    <!-- button半透明背景 -->
+    <color name="button_bg">#22ffffff</color>
+    
+    <color name="half_color">#50000000</color>
+    
+	<!-- city -->
+	<color name="color_black">#000000</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_gray_light">#99C9C9C9</color>
+    <color name="color_black_light">#99000000</color>
+    
+    <!-- 成长名片 -->
+    <color name="user_show_b8bbbb">#b8bbbb</color>
+    <color name="user_show_d5d1cb">#d5d1cb</color>
+    <color name="user_show_aaa9aa">#aaa9aa</color>
+    <color name="user_show_2b2b2b">#2b2b2b</color>
+    <color name="setting_afaeae">#afaeae</color>
+    
+    <color name="menu_fragment_background">#B3000000</color>
+    
+   <!--  <color name="title_color">#B2FA5252</color> -->
+    
+    <color name="menu_left_bg">#2f3c4c</color>
+    <color name="menu_left_item_bg">#FF5757</color>
+    
+    <!-- chat -->
+    
+    <color name="chat_select_self">#626262</color>
+    <color name="chat_time_display">#999999</color>
+    <color name="chat_divide_line">#ededed</color>
+    <color name="chat_name_i">#b6322c</color>
+    <color name="chat_name_system">#999999</color>
+    <color name="chat_edit_view">#aaaaaa</color>
+    <color name="chat_name_other_people">#333333</color>
+    <color name="chat_hint_talking_peplore">#aaaaaa</color>
+    
+    
+    <!-- 融云 -->
+    <color name="de_title_bg">#0195ff</color>
+    <!--actionbar-->
+    <color name="de_actionbar_bg">#0195ff</color>
+    
+</resources>

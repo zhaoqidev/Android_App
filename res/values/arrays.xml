@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ownitem" translatable="false">
+        <item>我的课程</item>
+        <item>我的笔记</item>
+        <item>我的收藏</item>
+        <item>我的答疑</item>
+        <item>我的代言</item>
+        <!-- <item>我的考试</item> -->
+        <item>我的活动</item>
+        <item>我的关注</item>
+        <item>我的钱包</item>
+        <item>我的订单</item>
+        <item>我的商城</item>
+        <item>收货地址</item>
+        <item>我的站内信</item>
+    </string-array>
+
+    <string-array name="schoolmatepeer" translatable="false">
+        <item>请选择行业</item>
+        <item>教育/培训/院校</item>
+        <item>计算机软件</item>
+        <item>互联网/电子商务</item>
+        <item>娱乐/媒体/艺术/文化传播</item>
+        <item>金融/投资/证券</item>
+        <item>酒店/旅游</item>
+        <item>银行/保险</item>
+        <item>公关/市场推广/会展</item>
+        <item>金融/融资</item>
+    </string-array>
+
+    <!-- <integer-array name="left_menu_pic">
+        <item></item>
+        
+        
+    </integer-array> -->
+</resources>
+

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backGrond_f3"
+    android:orientation="vertical" >
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/xiahuaxian" />
+    <LinearLayout
+        android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+    	android:background="@drawable/selector_item"
+	    android:paddingLeft="11dp"
+	    android:paddingRight="11dp"
+	    android:layout_marginTop="10dp"
+	    android:orientation="vertical" >
+	<!-- 同学问题 -->
+
+	    <RelativeLayout
+	        android:id="@+id/layout_one"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dip" >
+			<ImageView
+	            android:id="@+id/imageView1"
+	            android:layout_width="15dp"
+	            android:layout_height="15dp"
+	            android:layout_centerVertical="true"
+	            android:src="@drawable/icon_question" />
+	        <TextView
+	            android:id="@+id/textView1"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="7dp"
+	            android:layout_toRightOf="@id/imageView1"
+	            android:layout_centerVertical="true"
+	            android:singleLine="true"
+	            android:text="同学问题"
+	            android:textColor="@color/user_show_2b2b2b"
+	            android:textSize="15sp" />
+
+	        <TextView
+                android:id="@+id/answer_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+	            android:layout_toRightOf="@id/textView1"
+	            android:layout_alignBottom="@id/textView1"
+	            android:layout_marginLeft="8dp"
+                android:text="今天 13:25"
+                android:textSize="12sp" />
+	    </RelativeLayout>
+
+	    <TextView
+	        android:id="@+id/question_doc"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="22dp"
+	        android:paddingTop="9dp"
+	        android:paddingBottom="9dp"
+	        android:text="同学问题内容"
+	        android:textColor="@color/text_color_one"
+	        android:textSize="13sp" />
+
+	    <View 
+	        android:layout_height="0.5dp"
+	        android:layout_width="match_parent"
+	        android:layout_marginLeft="22dp"
+	        android:background="@color/xiahuaxian"/>
+	<!-- 导师解答 -->
+	    <LinearLayout
+	        android:id="@+id/layout_two"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="12dip"
+	        android:layout_marginBottom="12dip"
+	        android:gravity="center_vertical"
+	        android:orientation="horizontal" >
+	        <ImageView
+	            android:layout_width="16dp"
+	            android:layout_height="16dp"
+	            android:src="@drawable/icon_anwser" />
+	
+	        <TextView
+	         android:layout_width="match_parent"
+	         android:layout_height="wrap_content"
+	         android:singleLine="true"
+	         android:text="导师解答"
+	         android:layout_marginLeft="7dp"
+	         android:textColor="@color/user_show_2b2b2b"
+	         android:textSize="15sp" />
+	    </LinearLayout>
+	    <View 
+	        android:layout_height="0.5dp"
+	        android:layout_width="match_parent"
+	        android:layout_marginLeft="22dp"
+	        android:background="@color/xiahuaxian"/>
+	    <TextView
+	        android:id="@+id/answer_doc"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="22dp"
+	        android:paddingTop="13dp"
+	        android:paddingBottom="13dp"
+	        android:text="导师解答内容"
+	        android:textColor="@color/text_color_one"
+	        android:textSize="13sp" />
+	</LinearLayout>
+	<View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/xiahuaxian" />
+</LinearLayout>

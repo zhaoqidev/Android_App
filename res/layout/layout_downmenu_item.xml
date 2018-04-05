@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_item"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+    <!-- 课程分类列表中的条目笔记 -->
+    <ImageView 
+        android:id="@+id/iv_downmenu"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/wodeimg_default"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+		<TextView 
+	        android:id="@+id/tv_downmenu"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="15dp"
+		    android:layout_centerVertical="true"
+		    android:text="商业通达"
+		    android:textColor="@color/color_itemname"
+		    android:textSize="16sp"/>
+		<ImageView 
+	        android:id="@+id/choose_downmenu"
+	        android:visibility="gone"
+	        android:layout_width="25dp"
+	        android:layout_height="25dp"
+		    android:layout_centerVertical="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginRight="15dp"
+	        android:src="@drawable/rightchoose"/>
+		<View 
+		    android:layout_width="match_parent"
+		    android:layout_height="0.5dp"
+		    android:layout_alignBottom="@id/tv_downmenu"
+		    android:layout_alignParentBottom="true"
+		    android:background="@color/xiahuaxian" />
+	</RelativeLayout>
+</LinearLayout>

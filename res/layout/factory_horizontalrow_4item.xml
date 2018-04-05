@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:layout_marginTop="16dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:background="@drawable/selector_item" >
+	<ImageView
+        android:id="@+id/icon_lift"
+        android:layout_width="25dip"
+        android:layout_height="25dip"
+        android:layout_marginLeft="8dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/left_menu_head" />
+	<TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/icon_lift"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:maxWidth="90dp"
+        android:singleLine="true"
+        android:text="文本"
+        android:textColor="@color/color_itemname"
+        android:textSize="16sp" />
+	<ImageView
+        android:id="@+id/icon_reight"
+        android:layout_width="41dip"
+        android:layout_height="41dip"
+        android:padding="8dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/left_menu_head" />
+	<EditText
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/text"
+        android:layout_toLeftOf="@+id/icon_reight"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/transparent"
+        android:singleLine="true"
+        android:textColorHint="@color/color_textcolor"
+        android:hint="输入框"
+        android:textColor="@color/dark_grey"
+        android:textSize="16sp" />
+</RelativeLayout>

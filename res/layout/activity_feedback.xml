@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none" >
+
+	    <LinearLayout 
+	        android:id="@+id/ll_content"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:padding="10dip"
+	        android:orientation="vertical" >
+	        <EditText 
+		        android:id="@+id/test_components" 
+		        android:layout_width="match_parent"
+		        android:layout_height="180dip"
+		        android:layout_marginTop="10dp"
+		        android:gravity="top"
+		        android:hint="@string/et_feedback_hint"
+		        android:maxLength="500"
+		        style="@style/edittext_style2"
+                android:textSize="15sp"
+		        android:singleLine="false" >
+		    </EditText>
+		    <EditText 
+		        android:id="@+id/contact_information" 
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="20dp"
+		        android:hint="@string/ed_feedback_connectionway"
+		        style="@style/edittext_style2"
+                android:textSize="15sp"
+		        android:singleLine="true" >
+		    </EditText>
+		    <Button 
+		        android:id="@+id/bt_save"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="20dp"
+		        android:text="@string/bt_submit"
+		        android:background="@drawable/img_login"
+		        android:textColor="@color/white"
+		        android:textSize="18sp"
+		        android:padding="10dp"/>
+	    </LinearLayout>
+    </ScrollView>

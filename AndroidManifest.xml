@@ -1,0 +1,992 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="cc.upedu.online"
+    android:versionCode="1"
+    android:versionName="1.16" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="22" />
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 发送短信验证码时所需要的权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- 百度地图所需要的权限 -->
+
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" >
+    </uses-permission>
+    <!-- 分享所需要的权限 -->
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- testin测试权限，发版可注掉 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <!-- 打电话的权限 -->
+    <!--<uses-permission android:name="android.permission.CALL_PHONE" />-->
+    
+     <!-- 录音 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+     <!--  -->
+	<uses-feature android:name="android.hardware.camera" />
+	<uses-feature android:name="android.hardware.camera.autofocus" />
+	<uses-feature android:name="android.hardware.camera.flash" />
+	<uses-permission android:name="android.permission.RECORD_VIDEO" />
+	<uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+
+    <!--振动权限-->
+    <uses-permission android:name="android.permission.VIBRATE" />
+     
+    <application
+        android:name="cc.upedu.online.OnlineApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:fitsSystemWindows="true">
+
+        <!-- android:theme="@android:style/Theme.Black.NoTitleBar" > -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="UYL6joxS0MrwVeHAV4tX17g2" />
+        
+        <!-- 友盟统计平台 -->
+        <meta-data android:value="56e28bae67e58e16cb002906" android:name="UMENG_APPKEY"></meta-data>
+		<meta-data android:value="aliyun" android:name="UMENG_CHANNEL"/>
+
+        <activity
+            android:name="cc.upedu.online.activity.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cc.upedu.online.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+
+            <!--
+               KakaoTalk ,分享应用的时候需要添加这个intent-filter,用于点击应用按钮跳转到APP
+               	其中android:scheme="kakaoc53410d71a7d6b96671aac1bd13a1982"是由"kakao"+APPKey               	
+            -->
+            <!-- host="upedu.cc"  是从分享页面跳转到成长吧 -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="kakaolink"
+                    android:scheme="kakao89fb6aa56692" />
+                <data
+                    android:host="upedu.cc"
+                    android:scheme="upedubar"
+                    android:path="/appregister"/>
+            </intent-filter>
+
+            <!--<intent-filter>
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="upedu.cc"
+                    android:scheme="upedubar"
+                    android:path="/appregister"/>
+            </intent-filter>-->
+        </activity>
+
+        <!-- 分享 -->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+
+            <!--
+            	AuthorizeAdapter表示一个继承自cn.sharesdk.framework.authorize.AuthorizeAdapter
+            	的类，这个类可以监听到页面的生命周期，也可以获取授权页面的各种UI控件。 
+            	开发者可以通过继承AuthorizeAdapter，重写其方法，并获取各种UI来自定义这个页面的行为。
+            -->
+            <meta-data
+                android:name="AuthorizeAdapter"
+                android:value="cn.sharesdk.demo.MyAdapter" />
+
+            <!--
+            	QZoneWebShareAdapter表示一个继承自cn.sharesdk.tencent.qzone.QZoneWebShareAdapter
+            	的类，这个类可以监听到页面的生命周期，也可以获QQ空间网页分享权页面的各种UI控件。 
+            	开发者可以通过继承QZoneWebShareAdapter，重写其方法，并获取各种UI来自定义这个页面的行为。
+            <meta-data android:name="QZoneWebShareAdapter" android:value="cn.sharesdk.demo.MyQZoneWebShareAdapter" />
+            <meta-data android:name="QQWebShareAdapter" android:value="cn.sharesdk.demo.MyQQWebShareAdapter" />
+            -->
+
+
+            <!--
+            	如果集成QQ分享，或者使用QQ客户端来进行QQ空间的分享，须要在此处添加一个对ACTION_VIEW
+            	事件的过滤器，其中的scheme是“tencent”前缀再开发者应用的加上appId。如果此过滤器不设置，
+            	则分享结束以后不能得到正确的回调
+            -->
+            <intent-filter>
+                <data android:scheme="tencent1104763200" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <!-- 微信分享回调 -->
+        <activity
+            android:name="cc.upedu.online.activity.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 调用新浪原生SDK，需要注册的回调activity -->
+        <activity
+            android:name="cn.sharesdk.sina.weibo.SinaActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 分享 -->
+
+
+        <!-- WXPay sdk begin -->
+        <activity
+            android:name="cn.beecloud.BCWechatPaymentActivity"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity-alias
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:targetActivity="cn.beecloud.BCWechatPaymentActivity" />
+        <!-- WXPay sdk end -->
+
+
+        <!-- alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!-- alipay sdk end -->
+
+
+        <!-- 乐视视频添加的服务 -->
+        <service
+            android:name="com.letv.pp.service.CdeService"
+            android:process=":cde" />
+        <!-- 登陆页面 -->
+        <activity
+            android:name="cc.upedu.online.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified" >
+        </activity>
+        <!-- 注册页面 -->
+        <activity
+            android:name="cc.upedu.online.activity.RegistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 注册协议页面 -->
+        <activity
+            android:name="cc.upedu.online.activity.RegistLawActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 课程介绍界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.CourseIntroduceActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="upedu.cc"
+                    android:scheme="upedubar"
+                    android:path="/front/coursecard"/>
+            </intent-filter>
+        </activity>
+        <!-- 课程体系界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.CourseArchitectureActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+
+        <!-- 课程学习界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.CourseStudyActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 文章详情界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.ArticleDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 我的课程页面 -->
+        <activity
+            android:name="cc.upedu.online.activity.MyCourseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+
+        <!-- 找回密码界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.FindPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 重置密码界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.ResetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+
+        <!-- 导师名片 -->
+        <activity
+            android:name="cc.upedu.online.activity.TeacherVisitCard"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="upedu.cc"
+                    android:scheme="upedubar"
+                    android:path="/front/appteacher"/>
+            </intent-filter>
+        </activity>
+        <!-- 单独的乐视视频播放界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.LeCPlayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"  ></activity>
+        <!-- 课程分享界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.CourseRepresentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <!-- 加入课程直播介绍的界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.TelecastApplayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+
+            <!-- android:windowSoftInputMode="adjustUnspecified" -->
+        </activity>
+        <!-- 在线直播间的界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.TelecastHomeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="false"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="cc.upedu.online.activity.LiveHomeActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 侧拉菜单中的设置功能的界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.SettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 设置界面中设置密码页面 -->
+        <activity
+            android:name="cc.upedu.online.activity.SetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 设置中的意见反馈界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.FeedbackActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 设置中的关于成长在线的界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.AboutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 同行学友筛选条件页面 -->
+        <activity
+            android:name="cc.upedu.online.activity.SchoolmatePeerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 设置中的编辑用户名片的界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.UserSettingActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 设置中的编辑用户名片的子页面设置名称 -->
+        <activity
+            android:name="cc.upedu.online.activity.SetNameActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 设置中的编辑用户名片的子页面设置位置 -->
+        <activity
+            android:name="cc.upedu.online.activity.SetAdressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 设置中的编辑用户名片的子页面设置个性背景 -->
+        <activity
+            android:name="cc.upedu.online.activity.SetBgActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 设置中的编辑用户名片的子页面设置生日 -->
+        <activity
+            android:name="cc.upedu.online.activity.SetBirthdayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 设置中的编辑用户名片的子页面设置企业 -->
+        <activity
+            android:name="cc.upedu.online.activity.SetCompanyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 设置中的编辑用户名片的子页面设置企业中添加/修改企业的界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.AddCompanyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 设置中的编辑用户名片的子页面设置企业中添加/修改主营产品的界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.AddProductActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 设置中的编辑用户名片的子页面设置企业中设置企业名称的界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.SetCompanyNameActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 设置中的编辑用户名片的子页面设置企业中设置所属行业的界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.SetIndustryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 设置中的编辑用户名片的子页面设置企业中主营产品的界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.SetProductListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 设置中的编辑用户名片的子页面设置企业中设置我在企业中的职位的界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.SetPositionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 设置中的编辑用户名片的子页面设置企业中设置企业网站的界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.SetCompanyWebActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 设置中的编辑用户名片的子页面设置梦想/展示梦想界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.SetDreamActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 设置单个梦想条目的界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.AddDreamActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 设置自定义爱好的界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.AddHobbyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 设置中的编辑用户名片的子页面设置邮箱 -->
+        <activity
+            android:name="cc.upedu.online.activity.SetEmailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 设置中的编辑用户名片的子页面设置爱好 -->
+        <activity
+            android:name="cc.upedu.online.activity.SetHobbyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 设置中的编辑用户名片的子页面设置电话 -->
+        <activity
+            android:name="cc.upedu.online.activity.SetPhoneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 设置中的编辑用户名片的子页面设置图片 -->
+        <activity
+            android:name="cc.upedu.online.activity.SetPictureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 设置中的编辑用户名片的子页面设置qq -->
+        <activity
+            android:name="cc.upedu.online.activity.SetQqActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 设置中的编辑用户名片的子页面设置价值观/展示价值观的界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.SetThoughtActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 设置单个价值观条目的界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.AddThoughtActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 设置中的编辑用户名片的子页面设置微信 -->
+        <activity
+            android:name="cc.upedu.online.activity.SetWeixinActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 公告列表界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.NoticeListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 公告详情界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.NoticeDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 活动详情页面 -->
+        <activity
+            android:name="cc.upedu.online.activity.SportDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="upedu.cc"
+                    android:scheme="upedubar"
+                    android:path="/activity"/>
+            </intent-filter>
+        </activity>
+        <!-- 我的代言页面 -->
+        <activity
+            android:name="cc.upedu.online.activity.MyRepresentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 发起活动页面 -->
+        <activity
+            android:name="cc.upedu.online.activity.SportIssueActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <!-- 侧拉栏，我的活动页面 -->
+        <activity
+            android:name="cc.upedu.online.activity.MySportActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 侧拉栏，我的笔记页面 -->
+        <activity
+            android:name="cc.upedu.online.activity.MyNoteActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 我的笔记中单个课程中的章节笔记列表 -->
+        <activity
+            android:name="cc.upedu.online.activity.MyNoteOneCourseListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 我的笔记中单个课程中的有笔记的学友的学友列表 -->
+        <activity
+            android:name="cc.upedu.online.activity.MyNoteOneCourseOtherUserListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- MyNoteOneCourseOneUserNoteListActivity -->
+        <activity
+            android:name="cc.upedu.online.activity.MyNoteOneCourseOneUserNoteListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 我的笔记中单个课程中的单个章节的布局的编辑 -->
+        <activity
+            android:name="cc.upedu.online.activity.MyNoteOneCourseEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 我的笔记中单个课程中的单个章节的布局的详情 -->
+        <activity
+            android:name="cc.upedu.online.activity.MyNoteOneCourseDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 我的笔记中索要笔记的记录 -->
+        <activity
+            android:name="cc.upedu.online.activity.MyNoteBlagRecordsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 侧拉栏，我的消息页面 -->
+        <activity
+            android:name="cc.upedu.online.activity.MyMessageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 侧拉栏，我的收藏页面 -->
+        <activity
+            android:name="cc.upedu.online.activity.MyCollectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+
+        <!-- 侧拉栏，我的答疑相关的课程列表页面 -->
+        <activity
+            android:name="cc.upedu.online.activity.MyAnswerListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 侧拉栏，某个课程相关的我的答疑页面 -->
+        <activity
+            android:name="cc.upedu.online.activity.MyStudyAnswerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 侧拉栏，某个课程相关的我的答疑中视频播放页面 -->
+        <activity
+            android:name="cc.upedu.online.activity.MyVideoAnswerPlayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 侧拉栏，我的钱包页面 -->
+        <activity
+            android:name="cc.upedu.online.activity.MyWalletActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 侧拉栏，我的钱包-我的零钱页面 -->
+        <activity
+            android:name="cc.upedu.online.activity.MyWalletSmallMoneyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 侧拉栏，我的钱包-我的成长币页面 -->
+        <activity
+            android:name="cc.upedu.online.activity.MyWalletCoinActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 侧拉栏，我的钱包-普通用户，我的零钱收支详情页面 -->
+        <activity
+            android:name="cc.upedu.online.activity.MyWalletDetailUserActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+
+        <!-- 侧拉栏，我的钱包-我的成长币 -->
+        <activity
+            android:name="cc.upedu.online.activity.MyWalletDetailCoinActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 侧拉栏，我的钱包-我的零钱图表显示 -->
+        <activity
+            android:name="cc.upedu.online.activity.MyWalletGetIncomeChartActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 侧拉栏，我的钱包-导师和代理商的收支明细列表 -->
+        <activity
+            android:name="cc.upedu.online.activity.MyWalletDetailDaoshiAndAgentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 发布活动，百度地图页面，确定活动地点 -->
+        <activity
+            android:name="cc.upedu.online.activity.BaiduMapAddress"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 侧拉栏，我的关注的学友的界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.MySchoolmateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 侧拉栏，给好友写私信的界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.PrivateLetterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 侧拉栏，给好友赠送成长币的界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.MyWalletCoinToFriendsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 侧拉栏，给好友赠送成长币，选择好友界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.SelectFriendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 购物车界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.MyShoppingTrolleyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 选择支付界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.PaymentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+
+        <!-- 成长名片界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.UserShowActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="upedu.cc"
+                    android:scheme="upedubar"
+                    android:path="/front/shareuser"/>
+            </intent-filter>
+        </activity>
+        <!-- 成长名片中显示所有企业界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.ShowCompanyListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 成长名片中显示企业详情界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.ShowCompanyDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 成长名片中显示用户图片界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.ShowPictureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 成长名片中显示所有产品列表界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.ShowProductListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 成长名片中显示所有产品列表界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.ShowProductDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+
+        <!-- 我的订单列表界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.MyOrderActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 我的订单详情界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.OrderDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+
+        <!-- 起始界面 -->
+        <!--
+             <activity android:name="cc.upedu.online.activity.SplashActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:screenOrientation="portrait" ></activity>
+        -->
+        <!-- 欢迎界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 充值界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.MyWalletRechargeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 学习记录界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.UserLearningRecordsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 查看大图的界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.ImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent" >
+        </activity>
+        <activity
+            android:name="cc.upedu.online.view.citychoose.CityChooseActity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- android:theme="@android:style/Theme.Translucent" -->
+        <activity
+            android:name="cc.upedu.online.CCMediaPlay.CCMediaPlayFull"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:label="@string/play"
+            android:screenOrientation="landscape" >
+        </activity>
+		<!-- 下载更新的app包 -->
+        <service android:name="cc.upedu.online.service.DownloadService" >
+        </service>
+        <!-- 微商城界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.MicroMallActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 微商城商品详情界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.MicroMallGoodsDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 微商城中添加/修改收获地址的界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.MicroMallAddressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 微商城中订单确认的界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.MicroMallOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 微商城中兑换记录的界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.MicroMallExchangeRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 我的收货地址界面 -->
+        <activity
+            android:name="cc.upedu.online.activity.MyReceivingAddressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+
+        <!-- 会话列表 -->
+        <activity
+            android:name="cc.upedu.online.ryim.ConversationListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="cc.upedu.online"
+                    android:pathPrefix="/conversationlist"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <!-- 聚合会话列表 -->
+        <activity
+            android:name="cc.upedu.online.ryim.SubConversationListActivtiy"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="cc.upedu.online"
+                    android:pathPrefix="/subconversationlist"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <!-- 获取token的service -->
+        <service android:name="cc.upedu.online.service.GetTokenService"></service>
+        <!-- 即时通讯，会话界面 -->
+        <activity
+            android:name="cc.upedu.online.ryim.ConversationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="cc.upedu.online"
+                    android:pathPrefix="/conversation/"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <!-- 发送照片的activity -->
+        <activity
+            android:name="io.rong.imkit.tools.SelectPictureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="io.rong.imkit.tools.PreviewPictureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="io.rong.imkit.tools.RongWebviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="io.rong.imkit.widget.provider.TakingPicturesActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <!-- 查看聊天图片 -->
+        <activity android:name="cc.upedu.online.ryim.PhotoActivity"
+            android:theme="@style/RongAppTheme" />
+        <activity android:name="cc.upedu.online.ryim.BaseActivity"
+            android:theme="@style/RongAppTheme">
+        </activity>
+        <activity android:name="cc.upedu.online.ryim.BaseActionBarActivity"
+            android:theme="@style/RongAppTheme">
+        </activity>
+
+        <service
+            android:name="io.rong.imlib.ipc.RongService"
+            android:process=":ipc" >
+        </service>
+        <service android:name="io.rong.imlib.ReConnectService" />
+
+        <receiver android:name="io.rong.imlib.ConnectChangeReceiver" />
+        <receiver android:name="io.rong.imlib.ipc.PushMessageReceiver" >
+            <intent-filter>
+                <action android:name="io.rong.push.message" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="io.rong.imlib.HeartbeatReceiver"
+            android:process=":ipc" />
+
+        <meta-data
+            android:name="RONG_CLOUD_APP_KEY"
+            android:value="qf3d5gbj3rbbh"
+            tools:replace="android:value"/>
+        <!-- 索要笔记和分享笔记 -->
+        <activity android:name="cc.upedu.online.activity.AskForNoteActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <!-- 打赏好友-->
+        <activity android:name="cc.upedu.online.activity.AwardGCoinActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <!--课程页面，分享二维码-->
+        <activity android:name="cc.upedu.online.activity.ShareQRCodeActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity android:name="cc.upedu.online.photoselector.PhotoPreviewActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name="cc.upedu.online.photoselector.PhotoSelectorActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+    </application>
+
+</manifest>

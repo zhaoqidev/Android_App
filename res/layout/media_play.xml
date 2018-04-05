@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/playerSurfaceViewRL"
+    android:layout_width="fill_parent"
+    android:layout_height="200dp"
+    android:background="@color/black" >
+
+    <SurfaceView
+        android:id="@+id/playerSurfaceView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+    </SurfaceView>
+
+    <LinearLayout
+        android:id="@+id/playerTopLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="top"
+        android:background="#80000000"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/videoIdText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:gravity="left"
+            android:singleLine="true"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:gravity="right" >
+
+            <Button
+                android:id="@+id/subtitleBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:text="@string/subtitle"
+                android:textColor="#FFFFFF"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/definitionBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:text="@string/definition"
+                android:textColor="#FFFFFF"
+                android:visibility="gone" />
+
+            <!-- 倍速播放选择 -->
+
+            <Button
+                android:id="@+id/speedPlayBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:text="@string/speed"
+                android:textColor="#FFFFFF"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/playerBottomLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="#80000000"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/btnPlay"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/btn_pause" >
+        </ImageView>
+
+
+        <Button
+            android:id="@+id/playScreenSizeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="@string/screensize"
+            android:textColor="#FFFFFF"
+            android:visibility="gone" />
+
+		<RelativeLayout
+		    android:id="@+id/rl_right"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/btnPlay"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+		    android:orientation="horizontal" >
+            
+	        <TextView
+	            android:id="@+id/playDuration"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginRight="5dp"
+	            android:maxLines="1"
+	            android:textColor="#FFFFFF"
+	            android:textSize="10sp" />
+	
+	        <ImageView
+	            android:id="@+id/backPlayList"
+	            android:layout_width="33dp"
+	            android:layout_height="33dp"
+	            android:layout_toRightOf="@id/playDuration"
+	            android:src="@drawable/iv_media_quanping"
+	            android:visibility="visible" />
+	        <TextView
+	            android:id="@+id/videoDuration"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginRight="5dp"
+	            android:layout_alignParentBottom="true"
+	            android:maxLines="1"
+	            android:textColor="#FFFFFF"
+	            android:textSize="10sp" />
+	        
+		</RelativeLayout>
+		
+        <LinearLayout
+            android:id="@+id/seekbarLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/rl_right"
+            android:layout_toRightOf="@id/btnPlay" >
+
+            <SeekBar
+                android:id="@+id/skbProgress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_weight="0.61"
+                android:maxHeight="10dp"
+                android:minHeight="5dp"
+                android:progressDrawable="@drawable/seekbar_style" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/volumeLayout"
+        android:layout_width="30dp"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/playerBottomLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/playerTopLayout"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:background="#80000000"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <cc.upedu.online.utils.VerticalSeekBar
+            android:id="@+id/volumeSeekBar"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:maxHeight="10dp"
+            android:minHeight="5dp"
+            android:progressDrawable="@drawable/seekbar_style" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="25dp"
+            android:src="@drawable/volume" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/subtitleText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/playerSurfaceView"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_horizontal"
+        android:textColor="#FFFFFF" />
+
+    <ProgressBar
+        android:id="@+id/bufferProgressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+</RelativeLayout>

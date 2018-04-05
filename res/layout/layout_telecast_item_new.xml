@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/cc.upedu.online"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backGrond"
+    android:orientation="vertical" >
+
+    <!-- 全部课程，条目的布局 -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="3dp"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/img_sportlist"
+        android:orientation="vertical" >
+
+        <!-- <ImageView
+            android:id="@+id/course_image"
+            android:layout_width="match_parent"
+            android:layout_height="225dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_sportlist" /> -->
+        	<!-- android:layout_alignBottom="@+id/course_image" -->
+		<LinearLayout
+		    android:id="@+id/ll_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+        	android:layout_marginLeft="9dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/theacher_Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:singleLine="true"
+                android:text="陈明亮"
+                android:textColor="@color/white_80"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/browse_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:drawableLeft="@drawable/liulan"
+                android:singleLine="true"
+                android:text=" 80次"
+                android:textColor="@color/white_80"
+                android:textSize="13sp" />
+        </LinearLayout>
+        <View
+		    android:id="@+id/line"
+		    android:layout_width="match_parent"
+		    android:layout_height="1dp"
+            android:layout_above="@id/ll_one"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="7dp"
+		    android:background="@color/white_4c" />
+        <TextView
+            android:id="@+id/starttime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/line"
+            android:layout_marginLeft="9dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white_80"
+            android:textSize="13sp"
+            android:text="2015-10-08 10:00"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/course_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="9dp"
+            android:layout_marginBottom="7dp"
+            android:layout_above="@id/starttime"
+            android:maxLines="2"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:text="企业文化系统提升课程"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+		
+<!--         	android:layout_alignBottom="@id/course_image"
+        	android:layout_alignRight="@id/course_image" -->
+		<cc.upedu.online.view.CircleImageView 
+	        android:id="@+id/civ_img"
+		    android:layout_width="45sp"
+        	android:layout_height="45sp"
+        	android:layout_marginRight="5dp"
+        	android:layout_marginBottom="8dp"
+        	android:layout_alignParentBottom="true"
+        	android:layout_alignParentRight="true"
+	        app:border_color="@color/border_color"
+	        app:border_width="2dp"
+        	android:src="@drawable/teacher_images"/>
+            
+         <LinearLayout
+             android:layout_width="135dp"
+             android:layout_height="22dp"
+             android:layout_alignLeft="@+id/note_user_image"
+             android:layout_alignTop="@+id/note_user_image"
+             android:layout_marginTop="8dp"
+             android:background="@drawable/sport_baoming"
+             android:gravity="left|center_vertical"
+             android:orientation="horizontal" >
+
+             <!-- <ImageView
+                 android:layout_width="12dp"
+                 android:layout_height="12dp"
+                 android:layout_marginLeft="4dp"
+                 android:src="@drawable/sport_icon" /> -->
+
+             <cc.upedu.online.view.CustomDigitalClock
+                 android:id="@+id/tv_countdown"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:gravity="center_horizontal"
+                 android:layout_gravity="center"
+                 android:layout_marginRight="2dp"
+                 android:textColor="@color/white"
+                 android:textSize="12sp" />
+         </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
+  
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_addview"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/add"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+	  		android:layout_marginTop="10dp"
+	  		android:layout_marginRight="10dp"
+       		android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/wodezhaopian" />
+
+</LinearLayout>

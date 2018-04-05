@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="14dp"
+    android:background="@drawable/selector_item" >
+	<ImageView
+	    android:id="@+id/iv_user"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/wodeimg_default" />
+	<TextView
+	    android:id="@+id/tv_username"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_toRightOf="@id/iv_user"
+	    android:layout_marginLeft="7dp"
+	    android:text="@string/name_username"
+	    android:textColor="@color/red_fb5252"
+	    android:textSize="14sp" />
+	<TextView
+		android:id="@+id/tv_notecontent"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+	    android:layout_toRightOf="@id/iv_user"
+	    android:layout_below="@id/tv_username"
+	    android:layout_marginLeft="7dp"
+        android:layout_marginTop="10dp"
+		android:text="@string/count_apply"
+		android:textColor="@color/course_title"
+		android:textSize="14sp" />
+	<RelativeLayout
+	    android:id="@+id/rl_course"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_toRightOf="@id/iv_user"
+	    android:layout_below="@id/tv_notecontent"
+	    android:layout_marginLeft="7dp"
+	    android:layout_marginTop="12dp"
+	    android:padding="5dp"
+	    android:background="@color/bg_beige" >
+        <ImageView
+            android:id="@+id/courseimage_item"
+            android:layout_width="48dp"
+            android:layout_height="36dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_course" />
+	    <TextView
+             android:id="@+id/course_title"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_toRightOf="@id/courseimage_item"
+             android:layout_marginLeft="3dp"
+             android:layout_centerVertical="true"
+             android:maxLines="2"
+             android:text="@string/name_course"
+             android:textColor="@color/course_title"
+             android:textSize="14sp" />
+	</RelativeLayout>
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@id/iv_user"
+		android:layout_below="@id/rl_course"
+		android:layout_marginLeft="7dp"
+		android:layout_marginTop="6dp"
+		android:orientation="horizontal" >
+    	<TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:text="@string/name_time_hint"
+            android:textColor="@color/color_textcolor"
+            android:textSize="13sp" />
+    	<LinearLayout
+    	    android:id="@+id/ll_reward"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+		    android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="3dp"
+    	    android:orientation="horizontal" >
+	        <ImageView
+	            android:id="@+id/iv_reward"
+		        android:layout_width="15dp"
+		        android:layout_height="15dp"
+		        android:scaleType="fitXY"
+		        android:src="@drawable/note_dashang" />
+			<TextView
+			    android:id="@+id/tv_reward"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_marginLeft="6dp"
+			    android:text="打赏"
+			    android:singleLine="true"
+			    android:textColor="@color/color_textcolor"
+			    android:textSize="12sp" />
+		</LinearLayout>
+	</RelativeLayout>
+</RelativeLayout>

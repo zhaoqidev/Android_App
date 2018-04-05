@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/cc.upedu.online"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_item"
+    android:orientation="horizontal" >
+
+    <!-- 导师主界面的导师条目 -->
+
+    <cc.upedu.online.view.CircleImageView
+        android:id="@+id/inspiration_image_item"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="top"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/left_menu_head"
+        app:border_color="@color/border_color"
+        app:border_width="2dp" />
+
+    <LinearLayout
+        android:id="@+id/layout_one"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="17dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/inspiration_name"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:text="张三"
+                android:textColor="@color/text_color_ten"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/wishes"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/inspiration_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="昨天 12:25"
+                android:textColor="@color/text_color_three"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/inspiration_doc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:text="中和智本首席架构师"
+            android:textColor="@color/text_color_one"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</LinearLayout>

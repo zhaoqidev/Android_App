@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="horizontal"  >
+	    <LinearLayout
+		    android:layout_width="0dp"
+		    android:layout_weight="7"
+		    android:layout_height="wrap_content"
+		    android:background="#000000"
+		    android:padding="10dp"
+		    android:orientation="horizontal" >
+		    <TextView 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+		    	android:textColor="@color/white"
+			    android:textSize="16sp"
+			    android:text="@string/aggregate" />
+		    <TextView 
+		        android:id="@+id/tv_total"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_marginLeft="10dp"
+			    android:singleLine="true"
+		    	android:textColor="@color/white"
+			    android:textSize="16sp"
+			    android:text="@string/count_morry" />
+		</LinearLayout>
+		<LinearLayout
+		    android:id="@+id/ll_settlement"
+		    android:layout_width="0dp"
+		    android:layout_weight="3"
+		    android:layout_height="wrap_content"
+		    android:background="#ff5e5e"
+		    android:padding="10dp"
+		    android:gravity="center"
+		    android:orientation="horizontal" >
+		    <TextView
+		        android:id="@+id/tv_settlement" 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="center"
+			    android:textSize="16sp"
+			    android:textColor="@color/white"
+			    android:text="@string/bt_confirmorder" />
+		</LinearLayout>
+	</LinearLayout>

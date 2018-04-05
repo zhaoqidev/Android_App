@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <cc.upedu.online.view.pullrefreshRecyclerview.PullLoadMoreRecyclerView
+        android:id="@+id/pullLoadMoreRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_nodata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/iv_nodata"
+	        style="@style/image_placeholder_style"
+            android:src="@drawable/nodata" />
+    </LinearLayout>
+
+    
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_gravity="right"
+        android:gravity="center"
+        android:background="@drawable/button_studyanswer"
+        android:minWidth="70dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:orientation="horizontal" >
+        
+		<TextView
+	        android:id="@+id/tv_num"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:paddingLeft="6dp"
+	        android:paddingRight="3dp"
+	        android:text="0人"
+	        android:textSize="15sp"
+	        android:textColor="@color/white" />
+		<ImageView
+		    android:layout_width="20dp"
+		    android:layout_height="20dp"
+		    android:scaleType="fitXY"
+		    android:src="@drawable/shaixuan" />
+    </LinearLayout>
+</FrameLayout>

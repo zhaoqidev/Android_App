@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="main_function" translatable="false">首页</string>
+    <string name="main_course" translatable="false">课程</string>
+    <string name="main_discpver" translatable="false">发现</string>
+    <string name="main_telecast" translatable="false">直播</string>
+    <string name="main_exam" translatable="false">考试</string>
+    <string name="login_name" translatable="false">用户名：</string>
+    <string name="login_pwd" translatable="false">密码：</string>
+    <string name="app_name" translatable="false">成长吧</string>
+    <string name="net_error" translatable="false">当前网络不可用，请先连接Internet！</string>
+	<string name="recent_browse_title" translatable="false">最近浏览</string>
+	<string name="loadTitle" translatable="false"><strong>正在更新数据</strong></string>
+	<string name="price" translatable="false">价格</string>
+	<string name="goback" translatable="false">返回</string>
+	<string name="collect" translatable="false">收藏</string>
+	<string name="alert_push" translatable="false">无法正常收发消息时,请确认\"系统设置—&#8212;通知\"中成长在线已被打开</string>
+	<string name="main_loading" translatable="false">玩命加载中&#8230;</string>
+	<string name="data_saveing" translatable="false">信息保存中&#8230;</string>
+	<string name="downmenu_title" translatable="false">我的课程(200)</string>
+	
+    <string name="name_chazhao" translatable="false">查找您感兴趣的课程</string>
+    <string name="name_fenlei" translatable="false">分类</string>
+    <string name="name_bisiness_tab" translatable="false">资讯</string>
+    <string name="name_kaoshi_tab" translatable="false">我</string>
+    <string name="name_talk_tab" translatable="false">讨论</string>
+    <string name="freecourse" translatable="false">免费</string>
+    <string name="name_quanbu" translatable="false">全部</string>
+    <string name="name_paixu" translatable="false">排序</string>
+    <string name="name_zuixin" translatable="false">最新</string>
+    <string name="name_shijian" translatable="false">热门</string>
+    <string name="name_lookljilu" translatable="false">观看记录</string>
+    <string name="name_occupational" translatable="false">职业资格</string>
+
+    <!-- 下载 -->
+    <string name="name_one" translatable="false">第一节</string>
+    <string name="name_kechengxiazai" translatable="false">选择您想要下载的课程</string>
+    <string name="name_xiazai" translatable="false">下载</string>
+    <string name="name_downNow" translatable="false">下载中</string>
+    <string name="name_complete" translatable="false">已完成</string>
+    <string name="name_username" translatable="false">姓名</string>
+    <string name="name_inputusername" translatable="false">请输入手机号码</string>
+    <string name="name_authcode" translatable="false">请输入验证码</string>
+    <string name="name_password" translatable="false">请输入密码</string>
+    <string name="name_confrimpwd" translatable="false">请再次输入密码</string>
+    <string name="name_denglu" translatable="false">登录</string>
+    <string name="name_regist" translatable="false">注册</string>
+    <string name="name_bianji" translatable="false">编辑</string>
+    <string name="name_quanxuan" translatable="false">清空</string>
+    <string name="name_shanchu" translatable="false">删除</string>
+    <string name="name_zuixinkec" translatable="false">最新课程详解第一步到位</string>
+    <string name="name_tuijian" translatable="false">推荐课程</string>
+    <string name="name_quanbukec" translatable="false">全部课程</string>
+    <string name="name_hangyezixun" translatable="false">行业资讯</string>
+    <string name="name_lijidenglu" translatable="false">立即登录</string>
+    <string name="name_mycoller" translatable="false">我的收藏</string>
+    <string name="name_mycourse" translatable="false">我的课程</string>
+    <string name="name_myplay" translatable="false">播放记录</string>
+    <string name="name_lixianxiazai" translatable="false">离线下载</string>
+    <string name="name_autoplay" translatable="false">视频自动播放</string>
+    <string name="name_changeplay1" translatable="false">CC视频播放</string>
+    <string name="name_changeplay2" translatable="false">乐视视频播放</string>
+    <string name="name_download" translatable="false">下载</string>
+    <string name="name_shezhe" translatable="false">设置</string>
+    <string name="name_quxiao" translatable="false">取消</string>
+    <string name="name_fenleis" translatable="false">分类：</string>
+    <string name="name_genxin" translatable="false">更新至：</string>
+    <string name="name_keshi" translatable="false">课时：</string>
+    <string name="name_jiangshi" translatable="false">讲师：</string>
+    <string name="name_notice" translatable="false">公告</string>
+    <string name="name_course" translatable="false">课程名称</string>
+    <string name="name_zhangjie" translatable="false">章节名称</string>
+    <string name="name_article" translatable="false">文章</string>
+    <string name="name_setname" translatable="false">编辑名片</string>
+    <string name="name_loadnumber" translatable="false">下载数量</string>
+    <string name="name_login" translatable="false">登录</string>
+    <string name="name_exitlogin" translatable="false">退出登录</string>
+    <string name="name_findpassword" translatable="false">找回密码</string>
+    <string name="name_resetpwd" translatable="false">重置密码</string>
+    <string name="name_userregist" translatable="false">用户注册</string>
+    <string name="name_wifi" translatable="false">允许非WIFI下网络播放/缓存视频</string>
+    <string name="warn_wifi" translatable="false">请慎重选择开启 避免过度使用流量</string>
+    <string name="name_push" translatable="false">推送设置</string>
+    <string name="name_pushtext" translatable="false">接受推送通知</string>
+    <string name="name_clean" translatable="false">清除缓存</string>
+    <string name="name_feedback" translatable="false">意见反馈</string>
+    <string name="name_about" translatable="false">关于成长吧</string>
+    <string name="name_checkversion" translatable="false">版本更新</string>
+    <string name="name_backimage" translatable="false">返回</string>
+    <string name="name_manner" translatable="false">支付方式</string>
+    <string name="name_send" translatable="false">发送</string>
+    <string name="name_feedtext" translatable="false">请您输入宝贵意见</string>
+    <string name="name_listnull_xiti_biji" translatable="false">您还没有添加过笔记</string>
+    <string name="name_Teacher_zige_zheng" translatable="false">教师资格证</string>
+    <string name="name_zhiye_zige" translatable="false">职业资格</string>
+    <string name="name_gongWuYuan" translatable="false">公务员</string>
+    <string name="name_IT" translatable="false">IT</string>
+    <string name="name_zhineng_Search" translatable="false">智能搜索</string>
+    <string name="name_back_WangXiao" translatable="false">返回网校</string>
+    <!-- 微信 -->
+    <string name="app_tip" translatable="false">提示</string>
+    <string name="getting_access_token" translatable="false">正在获取access token</string>
+    <string name="get_access_token_succ" translatable="false">获取access token成功</string>
+    <string name="get_access_token_fail" formatted="false" translatable="false">获取access token失败，原因%s</string>
+    <string name="getting_prepayid" translatable="false">正在获取预支付订单</string>
+    <string name="get_prepayid_succ" translatable="false">获取prepayid成功</string>
+    <string name="get_prepayid_fail" formatted="false"  translatable="false">获取prepayid失败，原因%s</string>
+
+    <!-- 支付宝 -->
+    <string name="settings" translatable="false">设置</string>
+    <string name="update" translatable="false">升级</string>
+    <string name="check_update" translatable="false">查询升级</string>
+    <string name="download" translatable="false">下载</string>
+    <string name="install" translatable="false">安装</string>
+    <string name="result" translatable="false">返回值</string>
+    <string name="launch_preferences" translatable="false">启动设置</string>
+    <string name="preference_attributes" translatable="false">属性设置</string>
+    <string name="global_preference" translatable="false">全局设置</string>
+    <string name="global_preference_summary" translatable="false">安全支付服务和DEMO的通用设置</string>
+    <string name="remote_call_failed" translatable="false">调用远程服务失败</string>
+
+    <string-array name="launch_list_entries" translatable="false">
+        <item>外部商户订单</item>
+        <item>远程订单</item>
+    </string-array>
+
+    <string name="name_Source" translatable="false">来源:</string>
+    <string name="name_chat" translatable="false">话题讨论</string>
+    <string name="text_ack_msg" translatable="false">已读</string>
+    <string name="text_delivered_msg" translatable="false">送达</string>
+    <string name="weichat_pay" translatable="false">微信快捷支付</string>
+    <string name="apli_pay" translatable="false">支付宝快捷支付</string>
+    <string name="notice_text" translatable="false">公告信息</string>
+    
+    <string name="name_mydream" translatable="false">我的梦想</string>
+    <string name="name_adddream" translatable="false">添加梦想</string>
+    <string name="name_addhobby" translatable="false">添加爱好</string>
+    <string name="name_dreamdoc" translatable="false">人生就是一场旅行,所有伟大的的成就都从一个想法开始,大胆的分享自己的梦想,发现有相同梦想的家人,让我们一起来实现它.</string>
+    <string name="name_picturedoc" translatable="false">最多可以上传10张形象照,以便家人更加了解你.</string>
+    <string name="name_though" translatable="false">我的价值观与信念</string>
+    <string name="name_addthough" translatable="false">添加价值观</string>
+    <string name="name_thoughdoc" translatable="false">请分享你的价值观和所坚守的信念,以找到同频的家人.</string>
+    <string name="name_noset" translatable="false">未设置</string>
+    <string name="name_noattention" translatable="false">未关注</string>
+    <string name="name_attention" translatable="false">已关注</string>
+    <string name="name_companyitem_doc" translatable="false">请真实全面填写企业信息,以便于家人更加了解自己,发现更多合作机会,合作从了解开始.</string>
+    <string name="name_productitem_doc" translatable="false">完善产品信息,让家人了解您能提供什么,已发现更多商业合作机会.</string>
+    <string name="title_signature" translatable="false">真实地表达自己\n让更多家人了解我\n真实和了解是建立有效人脉的关键</string>
+    <string name="hint_signature" translatable="false">真实地表达自己,让更多家人了解我</string>
+    <string name="noset_signature" translatable="false">该用户未添加签名</string>
+    <string name="name_userhead" translatable="false">头像</string>
+    <string name="name_mypic" translatable="false">我的照片</string>
+    <string name="name_mycompany" translatable="false">我的企业</string>
+    <string name="name_myaddress" translatable="false">我的位置</string>
+    <string name="name_myhobby" translatable="false">我的爱好</string>
+    <string name="name_mygender" translatable="false">性别</string>
+    <string name="name_mymarried" translatable="false">婚否</string>
+    <string name="name_mybirthday" translatable="false">我的生日</string>
+    <string name="name_myvalues" translatable="false">价值观与信念</string>
+    <string name="name_myemail" translatable="false">我的邮箱</string>
+    <string name="name_myphone" translatable="false">我的手机</string>
+    <string name="name_myweix" translatable="false">我的微信</string>
+    <string name="name_myqq" translatable="false">我的QQ号</string>
+    <string name="name_settingbg" translatable="false">个性背景</string>
+    
+    <string name="name_fister" translatable="false">首页</string>
+    <string name="name_course_tab" translatable="false">课程</string>
+    <string name="mycollte" translatable="false">我的收藏</string>
+    <string name="name_Lenb" translatable="false">/10</string>
+    <string name="name_course_title_two" translatable="false">会计专业</string>
+    <string name="name_course_title_oo" translatable="false"> )</string>
+    <string name="my_name" translatable="false">我的名字</string>
+    <string name="name_type" translatable="false">会计学</string>
+
+    <string name="name_save" translatable="false">确认</string>
+    <string name="name_setting" translatable="false">设置</string>
+    <string name="name_shoppingcart" translatable="false">购物车</string>
+    <string name="name_changepwd" translatable="false">修改密码</string>
+    <string name="name_changepassword" translatable="false">密码修改</string>
+    <string name="name_aboutme" translatable="false">关于我们</string>
+    <string name="name_add" translatable="false">添加</string>
+    <string name="name_card" translatable="false">取消</string>
+    <string name="name_next" translatable="false">下一层</string>
+    <string name="name_back_shouye" translatable="false">返回首页</string>
+    <string name="name_student" translatable="false">学员名称</string>
+    <string name="name_menu" translatable="false">菜单</string>
+    
+    <string name="shouxinren" translatable="false">收信人</string>
+    <string name="my_coin" translatable="false">成长币是成长吧平台学员用于课程学习；资料、课件、工具下载或购买，所使用的虚拟货币，成长币不能兑换现金，成长币可以通过分享课程，为课程做代言而获得。</string>
+	<!-- 用于校验输入框只能是数字和英文字母 -->
+    <string name="register_name_digits" translatable="false">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLIMNOPQRSTUVWXYZ</string>
+    <string name="ceo" translatable="false">董事长</string>
+    
+    <!-- 刷新加载使用的string -->
+    <string name="pushmsg_center_no_more_msg" translatable="false">已经到底啦</string>
+    <string name="pushmsg_center_pull_up_text" translatable="false">松开加载更多</string>
+    <string name="pushmsg_center_pull_down_text" translatable="false">下拉可以刷新</string>
+    <string name="pushmsg_center_pull_release_text" translatable="false">松开获取更多</string>
+    <string name="pushmsg_center_pull_down_update_time" translatable="false">上次刷新时间 : </string>
+    <string name="pushmsg_center_load_more_ongoing_text" translatable="false">正在加载中</string>
+    <string name="xsearch_loading" translatable="false">正在刷新…</string>
+    
+    <!-- walistview 中使用的string -->
+    <string name="Loading">正在加载</string>
+    <string name="LatestData">已为最新数据</string>
+    <string name="Refreshing">正在刷新</string>
+    <string name="ReleaseToRefresh">释放刷新</string>
+    <string name="ScrollUpToLoad">上拉加载</string>
+    <string name="ScrollUpToLoadMore">上拉加载更多</string>
+    <string name="PullToRefresh">下拉刷新</string>
+    <string name="ReleaseToLoad">释放加载更多</string>
+    <string name="LastRefresh">最后更新</string>
+
+    <!-- 加载图片失败时的提示文本 -->
+    <string name="picture_load_image_failed" translatable="false">点击屏幕，重新加载</string>
+    <!-- 加载中提示 -->
+    <string name="picture_image_loading" translatable="false">正在加载…</string>
+    
+    <!-- 下拉刷新和上拉加载更多的文本 -->
+    <string name="pull_to_refresh_header_hint_normal" translatable="false">@string/pushmsg_center_pull_down_text</string>
+    <string name="pull_to_refresh_header_hint_normal2" translatable="false">上拉可以刷新</string>
+    <string name="pull_to_refresh_header_hint_ready" translatable="false">松开后刷新</string>
+    <string name="pull_to_refresh_header_hint_loading" translatable="false">@string/pushmsg_center_load_more_ongoing_text</string>
+    <string name="pull_to_refresh_header_last_time" translatable="false">@string/pushmsg_center_pull_down_update_time</string>
+    <string name="pull_to_refresh_footer_hint_ready" translatable="false">松开载入更多</string>
+    <string name="pull_to_refresh_refreshing_label" translatable="false">@string/pull_to_refresh_header_hint_loading</string>
+    <string name="pull_to_refresh_no_more_data" translatable="false">@string/pushmsg_center_no_more_msg</string>
+    <string name="pull_to_refresh_network_error" translatable="false">网络不给力，请检查网络</string>
+    
+    <!-- 图片保存的文字 -->
+    <string name="picture_save_succeed" translatable="false">图片已保存到相册</string>
+    <string name="picture_save_fail" translatable="false">保存图片失败</string>
+    <string name="picture_next_album" translatable="false">下一组：</string>
+    <string name="picture_previous_album" translatable="false">上一组：</string>
+    
+    <string name="inputadress">请选择活动地址或手动输入</string>
+    
+    <string name="confirm">确定</string>
+    
+    <string name="checkstand">成长吧-收银台</string>
+    
+    <string name="aggregate">合计:</string>
+    
+    <string name="payments">结算</string>
+    
+    <string name="bt_study">我要学习</string>
+    
+    <string name="bt_represent">我要代言</string>
+    
+    <string name="represent_itemtitle">我的学习感悟</string>
+    
+    <string name="represent_ed_hint">请分享您学习本课程,收获和领悟到了什么,对您的生活和事业的帮助和启发是什么?</string>
+    
+    <string name="represent_share">分享课程</string>
+    
+    <string name="note">笔记</string>
+    <string name="note_content">笔记内容</string>
+    
+    <string name="question">提问</string>
+    
+    <string name="represent">代言</string>
+    
+    <string name="bt_save">保存</string>
+    <string name="bt_saveorder">提交订单</string>
+    
+    <string name="ed_note_hint">笔记:</string>
+    
+    <string name="et_question_hint">提问:</string>
+    
+    <string name="title_teacher">导    师:</string>
+    
+    <string name="name_teacher">导师名称</string>
+    
+    <string name="title_applycount">报    名:</string>
+    
+    <string name="count_apply">80人</string>
+    
+    <string name="et_feedback_hint">请输入您的宝贵的意见和建议</string>
+    
+    <string name="ed_feedback_connectionway">留下你的联系方式,方便我们老师与您联系!</string>
+    
+    <string name="bt_submit">提交</string>
+    
+    <string name="verification_code">验证码</string>
+    
+    <string name="verificationcode_get">获取验证码</string>
+    
+    <string name="name_autologin">自动登陆</string>
+    
+    <string name="forget_password">忘记密码？</string>
+    
+    <string name="bt_coursecollect">课程收藏</string>
+    
+    <string name="bt_articlecollect">文章收藏</string>
+    
+    <string name="name_message">消息</string>
+    
+    <string name="name_time_hint">2015&#8211;07&#8211;02 16:63</string>
+    
+    <string name="name_ordertitle">订单信息</string>
+    
+    <string name="name_ordercode">订单号：</string>
+    
+    <string name="title_obligation">待付款：</string>
+    
+    <string name="immediate_payment">立即付款</string>
+    <string name="immediate_payment2">立即支付</string>
+    
+    <string name="bt_sport_collect">收藏的活动</string>
+    
+    <string name="bt_sport_join">参加的活动</string>
+    
+    <string name="bt_sport_my">我的活动</string>
+    
+    <string name="bt_text_answer">导师文字答疑</string>
+    
+    <string name="bt_video_answer">导师视频答疑</string>
+    
+    <string name="name_mysmallmorry">我的零钱</string>
+    
+    <string name="count_morry">0.00</string>
+    <string name="count_czb">0</string>
+    
+    <string name="name_myczb">我的成长币</string>
+    
+    <string name="name_czbtofriend">送成长币给朋友</string>
+    
+    <string name="name_zbrecharge">用倬币充值</string>
+    
+    <string name="name_remarks">备注：</string>
+    
+    <string name="et_inputnumber">输入金额</string>
+    
+    <string name="bt_select_friend">选择好友</string>
+    
+    <string name="bt_comfirmpresented">确定赠送</string>
+    
+    <string name="name_czbszmx">成长币收支明细</string>
+    
+    <string name="name_timefind">按时间查询</string>
+    
+    <string name="name_shareincome">智慧分享收入</string>
+    
+    <string name="name_otherszmx">其他收支明细</string>
+    
+    <string name="name_checkdetail">查看明细</string>
+    
+    <string name="name_mornysymbol">¥</string>
+    
+    <string name="title_studentname">学员姓名：</string>
+    
+    <string name="title_coursename">课程名称：</string>
+    
+    <string name="title_coursepirce">课程价格：</string>
+    
+    <string name="title_rewards">收支金额：</string>
+    
+    <string name="title_buytime">购买时间：</string>
+    
+    <string name="name_czdlsr">成长代理收入</string>
+    
+    <string name="name_rewardsmorry">奖励金额</string>
+    
+    <string name="name_lqszmx">零钱收支明细</string>
+    
+    <string name="title_detail">明细</string>
+    
+    <string name="title_time">时间：</string>
+    
+    <string name="title_content">内容：</string>
+    
+    <string name="title_money">金额：</string>
+    
+    <string name="title_qxzczje">请选择充值金额</string>
+    
+    <string name="et_qsrje_hint">请输入金额</string>
+    
+    <string name="title_qxzzffs">请选择支付方式</string>
+    
+    <string name="name_zhifubaopay">支付宝支付</string>
+    
+    <string name="name_weixinpay">微信支付</string>
+    <string name="name_yinlianpay">银联支付</string>
+    
+    <string name="bt_ljcz">立即充值</string>
+    
+    <string name="name_mysmallmorny">我的零钱</string>
+    
+    <string name="bt_recharge">充值</string>
+    
+    <string name="bt_withdraw_deposit">提现</string>
+    
+    <string name="name_totalamount">商品总额</string>
+    
+    <string name="title_mysmallmorny">我的零钱：</string>
+    
+    <string name="title_orderstime">下单时间：</string>
+    
+    <string name="cancellation_order">取消订单</string>
+    
+    <string name="title_needpay">还需支付：</string>
+    
+    <string name="title_positionname">行业名称</string>
+    
+    <string name="title_industryname">职位名称</string>
+    
+    <string name="name_drem_hint">未设置梦想</string>
+    
+    <string name="name_500">500</string>
+    
+    <string name="name_1000">1000</string>
+    
+    <string name="name_5000">5000</string>
+    
+    <string name="name_10000">10000</string>
+    
+    <string name="name_30000">30000</string>
+    
+    <string name="name_srmx">收入明细</string>
+    
+    <string name="title_isuserczbpay">是否使用成长币支付</string>
+    
+    <string name="name_use">使用</string>
+    
+    <string name="name_nouse">不使用</string>
+    
+    <string name="remarks_czbpay">注:如使用成长币可手动输入,每10币折合人民币1元。一经确认订单，成长币即被消费；如果产生退款行为，成长币不能返还。</string>
+    
+    <string name="bt_confirmorder">确认订单</string>
+    
+    <string name="name_registername_hint">请输入真实姓名</string>
+    
+    <string name="name_agree">同意</string>
+    
+    <string name="name_czbagreement">成长吧协议</string>
+    
+    <string name="name_searchkeyword">搜索关键词</string>
+    
+    <string name="name_addressee">收信人:</string>
+    
+    <string name="name_sentmessage_hint">请在此输入您将要发送的信息</string>
+    
+    <string name="remarks_city">请分享自己经常所在的城市,以此发现同城的家人.</string>
+    
+    <string name="remarks_birthday">让家人知道你的生日,你将会获得更多家人的祝福!</string>
+    
+    <string name="remarks_realinformation">备注:为了让家人了解自己,请添加真实信息</string>
+    
+    <string name="remarks_email">备注:请留下真实的邮箱,以便于家人找到你.</string>
+    
+    <string name="remarks_name">备注:为了让家人了解自己,请使用真实姓名</string>
+    
+    <string name="remarks_phone">备注:请留下真实的手机,以便于家人找到你.</string>
+    
+    <string name="remarks_qq">备注:请留下真实的QQ,以便于家人找到你.</string>
+    
+    <string name="remarks_weixin">备注:请留下真实的微信,以便于家人找到你.</string>
+    
+    <string name="remarks_sporttitle">好的标题是吸引人的关键，建议20字以内</string>
+    
+    <string name="imageView_desc">图片描述</string>
+    
+    <string name="myattention_look_friend">查看好友名片</string>
+    
+    <string name="myattention_sendmessage">发站内信</string>
+    
+    <string name="myattention_cancel_attention">取消关注</string>
+    
+    <string name="myattention_cancel">取消</string>
+    
+    <string name="sendmessage_saysomething">说点什么吧</string>
+    <!-- cc视频 -->
+    <string name="action_settings">Settings</string>
+    <string name="play">播放</string>
+    <string name="upload_video_info">视频信息</string>
+    <string name="download_list">离线列表</string>
+    <string name="screensize">画面尺寸</string>
+    <string name="definition">清晰度</string>
+    <string name="subtitle">字幕</string>
+    <string name="speed">倍速</string>
+    <string name="account_info">账户信息</string>
+    
+    <!-- city -->
+    <string name="search_hint">search</string>
+	<string name="empty_list_msg">No Results</string>
+	<string name="add_shopcar">兑换</string>
+	<string name="phone_number">18812345678</string>
+	<string name="coin_number">当前成长币余额：</string>
+	
+	<!-- 融云 -->
+	<string name="de_save">"保存"</string>
+	
+	<!-- chat -->
+	<string name="brow_nh_cn">【emotion.smile.gif】</string>
+    <string name="brow_zj_cn">【emotion.goodbye.gif】</string>
+    <string name="brow_gx_cn">【emotion.laugh.gif】</string>
+    <string name="brow_sx_cn">【emotion.cry.gif】</string>
+    <string name="brow_tkl_cn">【feedback.quickly.png】</string>
+    <string name="brow_tml_cn">【feedback.slowly.png】</string>
+    <string name="brow_zt_cn">【feedback.agreed.png】</string>
+    <string name="brow_fd_cn">【feedback.against.gif】</string>
+    <string name="brow_gz_cn">【feedback.applaud.png】</string>
+    <string name="brow_fn_cn">【emotion.angerly.gif】</string>
+    <string name="brow_zdsk_cn">【feedback.think.png】</string>
+    <string name="brow_wl_cn">【emotion.nod.gif】</string>
+    <string name="brow_lh_cn">【emotion.lh.gif】</string>
+    <string name="brow_bs_cn">【emotion.bs.gif】</string>
+    <string name="brow_yw_cn">【emotion.question.gif】</string>
+    <string name="brow_dx_cn">【rose.down.png】</string>
+    <string name="brow_xh_cn">【rose.up.png】</string>
+    <string name="brow_lw_cn">【chat.gift.png】</string>
+    <string name="emotion_bz_cn">【emotion.bz.gif】</string>
+    <string name="emotion_fd_cn">【emotion.fd.gif】</string>
+    <string name="emotion_gg_cn">【emotion.gg.gif】</string>
+     <string name="emotion_gz_cn">【emotion.gz.gif】</string>
+     <string name="emotion_hx_cn">【emotion.hx.gif】</string>
+     <string name="emotion_jk_cn">【emotion.jk.gif】</string>
+     <string name="emotion_jy_cn">【emotion.jy.gif】</string>
+     <string name="emotion_kb_cn">【emotion.kb.gif】</string>
+     <string name="emotion_kl_cn">【emotion.kl.gif】</string>
+     <string name="emotion_ll_cn">【emotion.ll.gif】</string>
+     <string name="emotion_qd_cn">【emotion.qd.gif】</string>
+     <string name="emotion_qh_cn">【emotion.qh.gif】</string>
+     <string name="emotion_qq_cn">【emotion.qq.gif】</string>
+     <string name="emotion_rb_cn">【emotion.rb.gif】</string>
+     <string name="emotion_se_cn">【emotion.se.gif】</string>
+     <string name="emotion_tx_cn">【emotion.tx.gif】</string>
+     <string name="emotion_xu_cn">【emotion.xu.gif】</string>
+     <string name="emotion_yun_cn">【emotion.yun.gif】</string>
+    
+    <string name="brow_nh_cn_text">[Hello]</string>
+    <string name="brow_zj_cn_text">[Goodbye]</string>
+    <string name="brow_gx_cn_text">[Smile]</string>
+    <string name="brow_sx_cn_text">[Sad]</string>
+    <string name="brow_tkl_cn_text">[Too fast]</string>
+    <string name="brow_tml_cn_text">[Too slow]</string>
+    <string name="brow_zt_cn_text">[Agree]</string>
+    <string name="brow_fd_cn_text">[Oppose]</string>
+    <string name="brow_gz_cn_text">[Applaud]</string>
+    <string name="brow_fn_cn_text">[Angry]</string>
+    <string name="brow_zdsk_cn_text">[Pondering]</string>
+    <string name="brow_wl_cn_text">[Bored]</string>
+    <string name="brow_lh_cn_text">[Sweating]</string>
+    <string name="brow_bs_cn_text">[Despise]</string>
+    <string name="brow_yw_cn_text">[Doubt]</string>
+    <string name="brow_dx_cn_text">[Wilt]</string>
+    <string name="brow_xh_cn_text">[Flower]</string>
+    <string name="brow_lw_cn_text">[Gift]</string>
+    <string name="emotion_bz_cn_text">[Silence]</string>
+    <string name="emotion_fd_cn_text">[Strive]</string>
+    <string name="emotion_gg_cn_text">[Embarrassed]</string>
+    <string name="emotion_gz_cn_text">[Applause]</string>
+    <string name="emotion_hx_cn_text">[Shy]</string>
+    <string name="emotion_jk_cn_text">[Panic]</string>
+    <string name="emotion_jy_cn_text">[Surprised]</string>
+     <string name="emotion_kb_cn_text">[Pick Nose]</string>
+     <string name="emotion_kl_cn_text">[Whimper]</string>
+     <string name="emotion_ll_cn_text">[Sob]</string>
+    <string name="emotion_qd_cn_text">[Hammer]</string>
+    <string name="emotion_qh_cn_text">[Thumbs Up]</string>
+    <string name="emotion_qq_cn_text">[Pucker]</string>
+    <string name="emotion_rb_cn_text">[Thumbs Down]</string>
+    <string name="emotion_se_cn_text">[Drooling]</string>
+    <string name="emotion_tx_cn_text">[Chunkle]</string>
+     <string name="emotion_xu_cn_text">[Shhh]</string>
+      <string name="emotion_yun_cn_text">[Hypnotized]</string>
+    <string name="chat_context_max">Up to 512 characters are enabled.</string>
+    <string name="chat_context_avatar_max">Up to 20 emoticons can be inserted.</string>
+    <string name="chat_expression">表情</string>
+    <string name="chat_sendmsg">发送</string>
+    <string name="sytsemmesg">系统消息</string>
+    <string name="displaytime">00:00:00</string>
+    <string name="myattention_im_message">发消息</string>
+    <string name="main_message">消息</string>
+    <string name="myattention_askfor_note">索要笔记</string>
+    <string name="myattention_share_note">分享笔记</string>
+    <string name="income_explain">收支说明：</string>
+
+</resources>

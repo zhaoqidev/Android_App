@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_item"
+    android:padding="10dp"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/courseimage_item"
+        android:layout_width="88dip"
+        android:layout_height="61dip"
+        android:layout_gravity="center_vertical"
+        android:scaleType="fitXY"
+        android:background="@drawable/img_course" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="5dip"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/course_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:text="@string/name_course"
+            android:textColor="@color/course_title"
+            android:textSize="14sp" />
+	    <ImageView
+	        android:id="@+id/iv_delete"
+	        android:layout_width="22dp"
+	        android:layout_height="22dp"
+	        android:scaleType="fitXY"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"
+	        android:visibility="gone"
+	        android:src="@drawable/delete" />
+
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_centerHorizontal="true"
+	        android:baselineAligned="false"
+	        android:orientation="horizontal" >
+
+	        <LinearLayout
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="2"
+	            android:gravity="bottom"
+	            android:orientation="horizontal" >
+
+	            <ImageView
+	                android:layout_width="15dp"
+	                android:layout_height="15dp"
+	                android:scaleType="fitXY"
+	                android:src="@drawable/courseitem_daoshi" />
+
+	            <TextView
+	                android:id="@+id/tv_teacherName"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="3dp"
+	                android:singleLine="true"
+	                android:text="@string/name_teacher"
+	                android:textColor="@color/color_textcolor"
+	                android:textSize="12sp" />
+	        </LinearLayout>
+
+	        <LinearLayout
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="3"
+	            android:gravity="bottom"
+	            android:orientation="horizontal" >
+
+	            <ImageView
+	                android:layout_width="15dp"
+	                android:layout_height="15dp"
+	                android:scaleType="fitXY"
+	                android:src="@drawable/courseitem_liulan" />
+
+	            <TextView
+	                android:id="@+id/tv_apply_count"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="3dp"
+	                android:singleLine="true"
+	                android:text="报名人数"
+	                android:textColor="@color/color_textcolor"
+	                android:textSize="12sp" />
+	        </LinearLayout>
+	    </LinearLayout>
+
+    </RelativeLayout>
+
+    </LinearLayout>

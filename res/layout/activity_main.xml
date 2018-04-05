@@ -1,0 +1,220 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/Navigation_menu" >
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:orientation="vertical" >
+	        <!-- titlebar的父布局 -->
+		    <LinearLayout
+		        android:id="@+id/fl_title"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical" >
+		        
+		    </LinearLayout>
+		    <!-- 中间内容的布局,下拉列表也在其中 -->
+		    <FrameLayout
+				android:id="@+id/layout_content"
+		        android:layout_width="fill_parent"
+		        android:layout_height="match_parent"
+		        android:background="@color/white" >
+		        
+		    </FrameLayout>
+	    </LinearLayout>
+	    <LinearLayout 
+            android:id="@+id/ll_down_menu"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="45dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <ListView 
+                android:id="@+id/lv_down_menu"
+                android:layout_width="match_parent"
+            	android:layout_height="match_parent"
+        		android:cacheColorHint="@android:color/white"
+	            android:scrollbars="none"
+        		android:fadingEdge="none"
+            	android:divider="@color/xiahuaxian"
+            	android:dividerHeight="0.5dp" >
+                
+            </ListView>
+        </LinearLayout>
+	    <LinearLayout 
+            android:id="@+id/ll_search_record"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="38dp"
+            android:layout_marginRight="48dp"
+            android:layout_marginTop="40dp"
+            android:background="@color/backGrond"
+            android:orientation="vertical">
+            <ListView 
+                android:id="@+id/lv_search_record"
+                android:layout_width="match_parent"
+            	android:layout_height="wrap_content"
+	            android:scrollbars="none"
+            	android:divider="@color/xiahuaxian"
+            	android:dividerHeight="1dp" >
+                
+            </ListView>
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/Navigation_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:baselineAligned="false"
+        android:background="@drawable/buttons_main_style"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <!-- <LinearLayout
+            android:id="@+id/layout_1"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/rb_tab1"
+                style="@style/main_tab_bottoms"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:background="@drawable/tab_one"
+                android:checked="true"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/home_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/main_function"
+                android:textColor="@color/tab_choice_color"
+                android:textSize="12sp" />
+        </LinearLayout> -->
+
+        <LinearLayout
+            android:id="@+id/layout_2"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/rb_tab2"
+                style="@style/main_tab_bottoms"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/tab_two"
+                android:checked="true"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/course_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/main_course"
+                android:textColor="@color/tab_choice_color"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_3"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/rb_tab3"
+                style="@style/main_tab_bottoms"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/tab_three"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/discpver_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/main_discpver"
+                android:textColor="@color/tab_color"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_4"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/rb_tab4"
+                style="@style/main_tab_bottoms"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/tab_four"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/telecast_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/main_telecast"
+                android:textColor="@color/tab_color"
+                android:textSize="12sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_5"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="visible"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/rb_tab5"
+                style="@style/main_tab_bottoms"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/iconfont_message_hui"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/meassage_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/main_message"
+                android:textColor="@color/tab_color"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

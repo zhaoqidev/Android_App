@@ -1,0 +1,68 @@
+package cc.upedu.online.base;
+
+import android.view.View;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+
+import cc.upedu.online.R;
+/**
+ * 在确定titlebar的基础上把activity的主题内容分成上下两部分的activity
+ * 两部分中上方部分高为包裹内容,下方部分高为填充父窗体
+ * @author Administrator
+ * @param <T>
+ *
+ */
+public abstract class TwoPartModelTopListBaseActivity<T> extends TwoPartModelTopBaseActivity {
+	private ListView lv_base;
+	private LinearLayout ll_nocontent;
+	private BaseMyAdapter<T> adapter;
+	
+	@Override
+	public View initTwelfthLayout() {
+		View view = View.inflate(context, R.layout.layout_listview, null);
+		lv_base = (ListView) view.findViewById(R.id.lv_base);
+		ll_nocontent = (LinearLayout) view.findViewById(R.id.ll_nocontent);
+		return view;
+	}
+	public void setListView(BaseMyAdapter<T> adapter) {
+		this.adapter = adapter;
+		if (adapter != null && adapter.getCount() > 0) {
+			setNocontentVisibility(View.GONE);
+			lv_base.setAdapter(adapter);
+		}else {
+			if (adapter != null) {
+				lv_base.setAdapter(adapter);
+			}
+			setNocontentVisibility(View.VISIBLE);
+		}
+	}
+	public void setOnItemClickListion(OnItemClickListener listener){
+		if (listener != null) {
+			lv_base.setOnItemClickListener(listener);
+		}
+	}
+	public void setNocontentVisibility(int visibility){
+		ll_nocontent.setVisibility(visibility);
+	}
+	public void notifyData() {
+		// TODO Auto-generated method stub
+		adapter.notifyDataSetChanged();
+		if (adapter.getCount() > 0) {
+			setNocontentVisibility(View.GONE);
+		}else {
+			setNocontentVisibility(View.VISIBLE);
+		}
+	}
+	public boolean isAdapterEmpty() {
+		// TODO Auto-generated method stub
+		if (adapter == null) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	public BaseMyAdapter<T> getAdapter(){
+		return adapter;
+	}
+}

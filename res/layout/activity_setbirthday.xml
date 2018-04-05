@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none" >
+    <LinearLayout 
+        android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical">
+		<View 
+		    android:layout_width="match_parent"
+		    android:layout_height="0.5dp"
+		    android:background="@color/xiahuaxian"/>
+	    <RelativeLayout 
+	        android:id="@+id/ll_birthday"
+	        android:layout_width="match_parent"
+	        android:layout_height="50dp"
+	        android:gravity="center_vertical"
+   			android:background="@drawable/selector_item"
+		    android:padding="10dp" >
+		    <ImageView 
+		        android:id="@+id/iv_one"
+		        android:layout_width="25dp"
+		        android:layout_height="25dp"
+		        android:src="@drawable/shengri_item"/>
+		    <TextView 
+		        android:id="@+id/tv_one"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:textColor="#ee000000"
+			    android:layout_toRightOf="@id/iv_one"
+			    android:layout_centerVertical="true"
+			    android:layout_marginLeft="10dp"
+			    android:textSize="16sp"
+			    android:text="阳历生日" />
+		    <TextView  
+		        android:id="@+id/tv_birthday"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_toRightOf="@id/tv_one"
+			    android:layout_centerVertical="true"
+			    android:textColor="@color/tab_color"
+			    android:layout_marginLeft="20dp"
+			    android:textSize="15sp"
+			    android:text="点击设置" />
+		    <ImageView 
+		        android:layout_alignParentRight="true"
+			    android:layout_centerVertical="true"
+			   	style="@style/right_arrows_style" />
+	    </RelativeLayout>
+	    <View 
+		    android:layout_width="match_parent"
+		    android:layout_height="0.5dp"
+		    android:background="@color/xiahuaxian"/>
+	    <LinearLayout  
+	        android:id="@+id/ll_birthdayzodiac"
+	        android:layout_width="match_parent"
+	        android:layout_height="50dp"
+	        android:gravity="center_vertical"
+		    android:padding="10dp"
+	        android:background="@color/white"
+	        android:orientation="horizontal" >
+		    <ImageView 
+		        android:layout_width="25dp"
+		        android:layout_height="25dp"
+		        android:src="@drawable/shengri_item"/>
+		    <TextView 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:textColor="#ee000000"
+			    android:layout_marginLeft="10dp"
+			    android:textSize="16sp"
+			    android:text="阴历生日" />
+		    <TextView 
+		        android:id="@+id/tv_birthdayzodiac"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:textColor="@color/tab_color"
+			    android:layout_marginLeft="20dp"
+			    android:textSize="15sp"
+			    android:text="@string/name_noset" />
+	    </LinearLayout>
+	    <View 
+		    android:layout_width="match_parent"
+		    android:layout_height="0.5dp"
+		    android:background="@color/xiahuaxian"/>
+	    <LinearLayout
+	        android:id="@+id/ll_constellation"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical"
+		    android:padding="10dp"
+	        android:background="@color/white"
+	        android:orientation="horizontal" >
+		    <ImageView 
+		        android:layout_width="25dp"
+		        android:layout_height="25dp"
+		        android:src="@drawable/xingzuo_item"/>
+		    <TextView 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:textColor="#ee000000"
+			    android:layout_marginLeft="10dp"
+			    android:textSize="16sp"
+			    android:text="我的星座" />
+		    <ImageView
+		        android:id="@+id/iv_constellation"
+			    android:layout_width="40dp"
+			    android:layout_height="40dp"
+			    android:layout_marginLeft="20dp"
+			    android:src="@drawable/img_constellation" />
+		    <TextView 
+		        android:id="@+id/tv_constellation"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:textColor="@color/tab_color"
+			    android:layout_marginLeft="20dp"
+			    android:textSize="15sp"
+			    android:text="@string/name_noset" />
+	    </LinearLayout>
+	    <View 
+		    android:layout_width="match_parent"
+		    android:layout_height="0.5dp"
+		    android:background="@color/xiahuaxian"/>
+	     <LinearLayout
+	        android:id="@+id/ll_zodiac"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical"
+		    android:padding="10dp"
+	        android:background="@color/white"
+	        android:orientation="horizontal" >
+		    <ImageView 
+		        android:layout_width="25dp"
+		        android:layout_height="25dp"
+		        android:src="@drawable/shuxiang_item"/>
+		    <TextView 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:textColor="#ee000000"
+			    android:layout_marginLeft="10dp"
+			    android:textSize="16sp"
+			    android:text="我的属相" />
+		    <ImageView
+		        android:id="@+id/iv_zodiac"
+			    android:layout_width="40dp"
+			    android:layout_height="40dp"
+			    android:layout_marginLeft="20dp"
+			    android:src="@drawable/img_zodiac" />
+		    <TextView 
+		        android:id="@+id/tv_zodiac"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:textColor="@color/tab_color"
+			    android:layout_marginLeft="20dp"
+			    android:textSize="15sp"
+			    android:text="@string/name_noset" />
+	    </LinearLayout>
+	    <View 
+		    android:layout_width="match_parent"
+		    android:layout_height="0.5dp"
+		    android:background="@color/xiahuaxian"/>
+	    <View 
+		    android:layout_width="match_parent"
+		    android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+		    android:background="@color/xiahuaxian"/>
+	     <RadioGroup 
+	        android:id="@+id/rg_jurisdiction" 
+			android:layout_width="match_parent" 
+			android:layout_height="wrap_content"
+			android:orientation="vertical"> 
+			<LinearLayout 
+		        android:layout_width="match_parent"
+		        android:layout_height="48dp"
+		        android:gravity="center_vertical"
+		        android:background="@color/white"
+		        android:orientation="horizontal" >
+				<RadioButton
+	                android:id="@+id/rb_friend"
+	                style="@style/main_tab_bottoms"
+	                android:layout_width="25dp"
+	                android:layout_height="25dp"
+	            	android:layout_marginLeft="10dp"
+	                android:background="@drawable/my_chock_box"
+	                android:checked="true"
+	                android:gravity="center" />
+			   	<TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="match_parent"
+	                android:layout_marginLeft="10dp"
+	                android:gravity="center_vertical"
+	                android:text="只对我的好友公开"
+	                android:textColor="@color/tab_color"
+	                android:textSize="16sp" />
+		    </LinearLayout>
+			<View 
+			    android:layout_width="match_parent"
+			    android:layout_height="0.5dp"
+			    android:background="@color/xiahuaxian"/>
+			<LinearLayout 
+		        android:layout_width="match_parent"
+		        android:layout_height="48dp"
+		        android:gravity="center_vertical"
+		        android:background="@color/white"
+		        android:orientation="horizontal" >
+				<RadioButton
+	                android:id="@+id/rb_all"
+	                style="@style/main_tab_bottoms"
+	                android:layout_width="25dp"
+	                android:layout_height="25dp"
+	            	android:layout_marginLeft="10dp"
+	                android:background="@drawable/my_chock_box"
+	                android:checked="false"
+	                android:gravity="center" />
+				<TextView
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="10dp"
+	                android:gravity="center_vertical"
+	                android:text="对所有的家人公开"
+	                android:textColor="@color/tab_color"
+	                android:textSize="16sp" />
+		    </LinearLayout>
+		</RadioGroup>
+	    <View 
+		    android:layout_width="match_parent"
+		    android:layout_height="0.5dp"
+		    android:background="@color/xiahuaxian"/>
+	</LinearLayout>
+</ScrollView>

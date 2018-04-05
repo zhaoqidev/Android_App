@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+	    <RelativeLayout
+	        android:id="@+id/ll_askquestion"
+	        android:layout_width="match_parent"
+	        android:layout_height="280dp"
+		    android:focusable="true"
+		    android:clickable="true"
+			android:layout_alignParentBottom="true"
+	        android:background="@color/backGrond"
+	        android:orientation="vertical"
+	        android:paddingLeft="20dp"
+	        android:paddingRight="20dp"
+	        android:visibility="gone" >
+	
+	        <RelativeLayout
+	            android:id="@+id/rl_title_question"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content" >
+	
+	            <LinearLayout
+	                android:id="@+id/back_question"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:clickable="true"
+	                android:gravity="center_vertical"
+	                android:orientation="horizontal" >
+	
+	                <ImageView
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:src="@drawable/jiantou"
+	                    android:visibility="gone" />
+	
+	                <TextView
+	                    android:layout_width="match_parent"
+	                    android:layout_height="40dp"
+	                    android:layout_marginLeft="5dp"
+	                    android:gravity="center_vertical"
+	                    android:text="@string/name_backimage"
+	                    android:textColor="#666666"
+	                    android:textSize="16sp" />
+	            </LinearLayout>
+	
+	            <TextView
+	                android:id="@+id/save_question"
+	                android:layout_width="wrap_content"
+	                android:layout_height="40dp"
+	                android:layout_alignParentRight="true"
+	                android:clickable="true"
+	                android:gravity="center_vertical"
+	                android:text="@string/bt_save"
+	                android:textColor="#666666"
+	                android:textSize="16sp" />
+	        </RelativeLayout>
+	
+	        <EditText
+	            android:id="@+id/ed_ask_question"
+	            style="@style/edittext_style3"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:layout_below="@id/rl_title_question"
+	            android:layout_above="@+id/ll_chock_question"
+	            android:gravity="top"
+	            android:hint="@string/et_question_hint"
+	            android:maxLength="255"
+	            android:textColorHint="@color/color_textcolor"
+	            android:textSize="14sp" />
+	        <LinearLayout
+	            android:id="@+id/ll_chock_question"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:gravity="center_vertical"
+	            android:layout_alignParentBottom="true"
+	            android:paddingTop="8dp"
+	            android:paddingBottom="8dp"
+	            android:orientation="horizontal" >
+	            <TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textSize="15sp"
+			        android:textColor="@color/color_itemname"
+			        android:text="公开:"/>
+			    <CheckBox
+					android:id="@+id/cb_choice_question"
+					style="@style/main_tab_bottoms"
+					android:layout_width="25dp"
+					android:layout_height="25dp"
+					android:layout_gravity="center"
+					android:layout_marginLeft="10dp"
+					android:background="@drawable/my_chock_box"
+					android:checked="true"
+					android:gravity="center" />
+	        </LinearLayout>
+	    </RelativeLayout>
+	
+	    <RelativeLayout
+	        android:id="@+id/ll_writenotice"
+	        android:layout_width="match_parent"
+	        android:layout_height="280dp"
+		    android:focusable="true"
+		    android:clickable="true"
+			android:layout_alignParentBottom="true"
+	        android:background="@color/backGrond"
+	        android:orientation="vertical"
+	        android:paddingLeft="20dp"
+	        android:paddingRight="20dp"
+	        android:visibility="gone" >
+	
+	        <RelativeLayout
+	            android:id="@+id/rl_title_notice"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content" >
+	
+	            <LinearLayout
+	                android:id="@+id/back_notice"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:clickable="true"
+	                android:gravity="center_vertical"
+	                android:orientation="horizontal" >
+	
+	                <ImageView
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:src="@drawable/jiantou"
+	                    android:visibility="gone" />
+	
+	                <TextView
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="40dp"
+	                    android:layout_marginLeft="5dp"
+	                    android:gravity="center_vertical"
+	                    android:text="@string/name_backimage"
+	                    android:textColor="#666666"
+	                    android:textSize="16sp" />
+	            </LinearLayout>
+	
+	            <TextView
+	                android:id="@+id/save_notice"
+	                android:layout_width="wrap_content"
+	                android:layout_height="40dp"
+	                android:layout_alignParentRight="true"
+	                android:clickable="true"
+	                android:gravity="center_vertical"
+	                android:text="@string/bt_save"
+	                android:textColor="#666666"
+	                android:textSize="16sp" />
+	        </RelativeLayout>
+	
+	        <EditText
+	            android:id="@+id/ed_write_notice"
+	            style="@style/edittext_style3"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:layout_below="@id/rl_title_notice"
+	            android:layout_above="@+id/ll_chock_notice"
+	            android:maxLength="1000"
+	            android:gravity="top"
+	            android:hint="@string/ed_note_hint"
+	            android:textColorHint="@color/color_textcolor"
+	            android:textSize="14sp" >
+	
+	            <requestFocus />
+	        </EditText>
+	        <LinearLayout
+	            android:id="@+id/ll_chock_notice"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:gravity="center_vertical"
+	            android:layout_alignParentBottom="true"
+	            android:paddingTop="8dp"
+	            android:paddingBottom="8dp"
+	            android:orientation="horizontal" >
+	            <TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textSize="15sp"
+			        android:textColor="@color/color_itemname"
+			        android:text="公开:"/>
+			    <CheckBox
+					android:id="@+id/cb_choice_notice"
+					style="@style/main_tab_bottoms"
+					android:layout_width="25dp"
+					android:layout_height="25dp"
+					android:layout_gravity="center"
+					android:layout_marginLeft="10dp"
+					android:background="@drawable/my_chock_box"
+					android:checked="true"
+					android:gravity="center" />
+	        </LinearLayout>
+	    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_item"
+    android:padding="10dp" >
+
+    <ImageView
+        android:id="@+id/iv_product"
+        android:layout_width="80dip"
+        android:layout_height="80dip"
+        android:scaleType="fitXY"
+        android:src="@drawable/wodeimg_default" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/ll_del"
+        android:layout_toRightOf="@+id/iv_product"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="5dip"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_productname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="产品名称"
+            android:textColor="@color/color_itemname"
+            android:textSize="14sp" />
+		<!-- <TextView
+            android:id="@+id/tv_creationtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:layout_marginTop="4dp"
+            android:text="2015年7月3日 17:21"
+            android:textColor="@color/color_textcolor"
+            android:textSize="10sp" /> -->
+        <TextView
+            android:id="@+id/tv_productdesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:text="产品描述信息"
+            android:textColor="@color/color_textcolor"
+            android:textSize="12sp" />
+    </LinearLayout>
+	<LinearLayout
+	    android:id="@+id/ll_del"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:padding="5dp"
+	    android:layout_alignParentRight="true"
+	    android:layout_centerVertical="true"
+	    android:orientation="vertical" >
+       <ImageView
+           android:layout_width="25dp"
+           android:layout_height="25dp"
+           android:background="@color/transparent"
+           android:scaleType="fitXY"
+           android:src="@drawable/iconfont_del" />
+    </LinearLayout>
+</RelativeLayout>

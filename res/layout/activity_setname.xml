@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/ll_default"
+    android:orientation="vertical" >
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:orientation="horizontal" >
+	    <ImageView 
+	        android:layout_width="30dp"
+	        android:layout_height="30dp"
+	        android:src="@drawable/set_name_item"/>
+	    <EditText 
+	        android:id="@+id/ed_name"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:maxLength="10"
+	        android:singleLine="true"
+	        style="@style/edittext_style2"
+	        android:textColorHint="@color/color_textcolor"
+            android:textSize="15sp"
+	        android:gravity="bottom"
+	        android:hint="我的姓名"/>
+    </LinearLayout>
+    <TextView  
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/remarks_name"/>
+    <View 
+	    android:layout_width="match_parent"
+	    android:layout_height="0.5dp"
+	    android:background="@color/xiahuaxian"/>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="16sp"
+	        android:layout_marginLeft="8dp"
+	        android:textColor="@color/color_itemname"
+	        android:text="性别:"/>
+	    <RadioGroup 
+	        android:id="@+id/rg_sex" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"> 
+			<RadioButton
+                android:id="@+id/rb_man"
+                style="@style/main_tab_bottoms"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/my_chock_box"
+                android:checked="true"
+                android:gravity="center" />
+			<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+	        	android:textColor="@color/color_itemname"
+                android:text="男"
+                android:textSize="16sp" />
+			<RadioButton
+                android:id="@+id/rb_woman"
+                style="@style/main_tab_bottoms"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/my_chock_box"
+                android:gravity="center" />
+			<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+	        	android:textColor="@color/color_itemname"
+                android:text="女"
+                android:textSize="16sp" />
+		</RadioGroup>
+    </LinearLayout>
+	<View 
+	    android:layout_width="match_parent"
+	    android:layout_height="0.5dp"
+	    android:background="@color/xiahuaxian"/>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="16sp"
+	        android:layout_marginLeft="8dp"
+	        android:textColor="@color/color_itemname"
+	        android:text="婚否:"/>
+	    <RadioGroup
+	        android:id="@+id/rg_marital" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"> 
+			<RadioButton
+                android:id="@+id/rb_yes"
+                style="@style/main_tab_bottoms"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/my_chock_box"
+                android:gravity="center" />
+			<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="是"
+                android:textColor="@color/color_itemname"
+                android:textSize="16sp" />
+			<RadioButton
+                android:id="@+id/rb_no"
+                style="@style/main_tab_bottoms"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/my_chock_box"
+                android:gravity="center" />
+			<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:text="否"
+                android:textColor="@color/color_itemname"
+                android:textSize="16sp" />
+			<RadioButton
+                android:id="@+id/rb_secret"
+                style="@style/main_tab_bottoms"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/my_chock_box"
+                android:checked="true"
+                android:gravity="center" />
+			<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:text="就不告诉你"
+                android:textColor="@color/color_itemname"
+                android:textSize="16sp" />
+		</RadioGroup>
+    </LinearLayout>
+    <View 
+	    android:layout_width="match_parent"
+	    android:layout_height="0.5dp"
+	    android:background="@color/xiahuaxian"/>
+</LinearLayout>

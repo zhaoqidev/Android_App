@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:background="@color/white"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp" >
+	<TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:maxWidth="90dp"
+        android:singleLine="true"
+        android:text="文本"
+        android:textColor="@color/color_itemname"
+        android:textSize="16sp" />
+	<EditText
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:gravity="top"
+        android:maxLength="100"
+        android:lines="5"
+        android:textColorHint="@color/color_textcolor"
+        android:hint="输入框"
+        android:textColor="@color/dark_grey"
+        android:textSize="14sp" />
+	<TextView
+        android:id="@+id/indexNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/edit"
+        android:layout_alignRight="@id/edit"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="-4dp"
+        android:singleLine="true"
+        android:text="0/100"
+        android:textColor="@color/color_textcolor"
+        android:textSize="12sp" />
+</RelativeLayout>

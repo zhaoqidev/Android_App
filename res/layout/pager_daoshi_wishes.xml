@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/daoshi_wishes"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" >
+
+        <FrameLayout
+            android:id="@+id/fl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <cc.upedu.online.view.listview.WALoadListView
+                android:id="@+id/lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@android:color/white"
+                android:divider="@color/color_xiahuaxian"
+                android:dividerHeight="1px"
+                android:fadingEdge="none"
+                android:scrollbars="none" >
+            </cc.upedu.online.view.listview.WALoadListView>
+
+            <LinearLayout
+                android:id="@+id/ll_nodata"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <ImageView
+                    style="@style/image_placeholder_style"
+                    android:src="@drawable/nodata" />
+            </LinearLayout>
+        </FrameLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" >
+
+        <RelativeLayout
+            android:id="@+id/ll_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="2dp" >
+
+            <TextView
+                android:id="@+id/btn_commit"
+                android:layout_width="45dp"
+                android:layout_height="38dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:background="@drawable/btn_greay_2x"
+                android:gravity="center"
+                android:text="发表"
+                android:textColor="@color/text_color_one"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_wishes"
+                style="@style/czb_edittext_style"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignBaseline="@+id/btn_commit"
+                android:layout_alignBottom="@+id/btn_commit"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/btn_commit"
+                android:hint="@string/sendmessage_saysomething"
+                android:lines="2"
+                android:textSize="13sp" >
+
+                <requestFocus />
+            </EditText>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <com.baidu.mapapi.map.MapView
+                android:id="@+id/bmapView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:clickable="true" />
+
+            <EditText
+                android:id="@+id/conaddress"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentTop="true"
+                android:background="#60000000"
+                android:gravity="left|center_vertical"
+                android:hint="@string/inputadress"
+                android:textColorHint="@color/white"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/conaddress"
+                android:layout_marginTop="-5dp" />
+
+            <Button
+                android:id="@+id/btn_confirm"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:background="@color/titlered_b2"
+                android:layout_marginRight="5dp"
+                android:layout_alignBaseline="@+id/conaddress"
+                android:layout_alignBottom="@+id/conaddress"
+                android:layout_alignParentRight="true"
+                android:text="@string/confirm"
+                android:textSize="14sp"
+                android:textColor="@color/white" />
+
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_sendmore"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#dddddd"
+    android:gravity="center_horizontal"
+    android:padding="15dp"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/ll_sendPic"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/sendPic"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/sl_sendmsg_pic"
+            android:src="@drawable/pic" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="相册"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_sendCamera"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/sendCamera"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/sl_sendmsg_camera"
+            android:src="@drawable/camera" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="相机"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+</LinearLayout>

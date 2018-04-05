@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/ll_usersetting"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dip"
+    			android:background="@drawable/selector_item"
+    			android:paddingTop="7dp"
+                android:paddingBottom="7dp" >
+
+                <cc.upedu.online.view.CircleImageView
+                    android:id="@+id/user_head"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/left_menu_head"
+                    app:border_color="@color/border_color"
+                    app:border_width="2dp" />
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toLeftOf="@+id/iv_one"
+                    android:layout_toRightOf="@+id/user_head"
+                    android:text="@string/name_noset"
+                    android:textColor="@color/user_show_2b2b2b"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/iv_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/right" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_cleanload"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:layout_marginTop="10dip"
+                android:gravity="center_vertical"
+    			android:background="@drawable/selector_item"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_marginLeft="15dip"
+                    android:layout_weight="9"
+                    android:text="@string/name_clean"
+                    android:textColor="@color/user_show_2b2b2b"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_loadnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:text="0k"
+                    android:textColor="@color/color_textcolor"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/color_xiahuaxian" />
+
+            <LinearLayout
+                android:id="@+id/collectlayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+    			android:background="@drawable/selector_item"
+	    		android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="4"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/name_wifi"
+                        android:textColor="@color/user_show_2b2b2b"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/warn_wifi"
+                        android:textColor="@color/setting_afaeae"
+                        android:textSize="14sp" />
+                </LinearLayout>
+				<LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+	                <CheckBox
+	                    android:id="@+id/wifi_cbtn"
+	                    android:layout_width="48dp"
+	                    android:layout_height="wrap_content"
+	                    android:button="@drawable/checkbtn"
+	                    android:background="@color/transparent"
+	                    android:checked="true" />
+	            </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/color_xiahuaxian" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+    			android:background="@drawable/selector_item"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="4"
+                    android:text="@string/name_autoplay"
+                    android:textColor="@color/user_show_2b2b2b"
+                    android:textSize="16sp" />
+				<LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+	                <CheckBox
+	                    android:id="@+id/autoplay_cbtn"
+	                    android:layout_width="48dp"
+	                    android:layout_height="wrap_content"
+	                    android:button="@drawable/checkbtn"
+	                    android:background="@color/transparent"
+	                    android:checked="false" />
+	            </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:visibility="gone"
+                android:background="@color/color_xiahuaxian" />
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+    			android:background="@drawable/selector_item"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" >
+
+                <TextView
+                    android:id="@+id/tv_changeplay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="4"
+                    android:text="@string/name_changeplay2"
+                    android:textColor="@color/user_show_2b2b2b"
+                    android:textSize="16sp" />
+				<LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+	                <CheckBox
+	                    android:id="@+id/changeplay_cbtn"
+	                    android:layout_width="46dp"
+	                    android:layout_height="wrap_content"
+	                    android:button="@drawable/checkbtn"
+	                    android:checked="false" />
+	            </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/color_xiahuaxian" />
+
+            <RelativeLayout
+                android:id="@+id/ll_changepassword"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+    			android:background="@drawable/selector_item"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toLeftOf="@+id/iv_two"
+                    android:layout_centerVertical="true"
+                    android:text="@string/name_changepassword"
+                    android:textColor="@color/user_show_2b2b2b"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/iv_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:contentDescription="@string/name_next"
+                    android:src="@drawable/right" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:layout_marginTop="10dip"
+    			android:background="@drawable/selector_item"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/iv_tree"
+                    android:text="@string/name_feedback"
+                    android:textColor="@color/user_show_2b2b2b"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/iv_tree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:contentDescription="@string/name_next"
+                    android:src="@drawable/right" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/color_xiahuaxian" />
+
+            <RelativeLayout
+                android:id="@+id/ll_about"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+    			android:background="@drawable/selector_item"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/iv_four"
+                    android:text="@string/name_about"
+                    android:textColor="@color/user_show_2b2b2b"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/iv_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:contentDescription="@string/name_next"
+                    android:src="@drawable/right" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/color_xiahuaxian" />
+
+            <RelativeLayout
+                android:id="@+id/ll_checkversion"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:background="@drawable/selector_item"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:text="@string/name_checkversion"
+                    android:textColor="@color/user_show_2b2b2b"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/iv_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:contentDescription="@string/name_next"
+                    android:src="@drawable/right" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/bt_login"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="65dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="65dp"
+                android:background="#FF5959"
+                android:text="@string/name_exitlogin"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
